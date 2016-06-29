@@ -1,40 +1,50 @@
-/* Created by Artisteer v4.1.0.59782 */
+/* Created by Artisteer v4.3.0.60745 */
 /*jshint forin:true, noarg:true, noempty:true, eqeqeq:true, bitwise:true, strict:true, undef:true, curly:false, browser:true, jquery:false */
 /*global jQuery BackgroundHelper */
 
 // css helper
-(function ($) {
+browser = function ($) {
     'use strict';
     var data = [
         { str: navigator.userAgent, sub: 'Chrome', ver: 'Chrome', name: 'chrome' },
         { str: navigator.vendor, sub: 'Apple', ver: 'Version', name: 'safari' },
         { prop: window.opera, ver: 'Opera', name: 'opera' },
         { str: navigator.userAgent, sub: 'Firefox', ver: 'Firefox', name: 'firefox' },
-        { str: navigator.userAgent, sub: 'MSIE', ver: 'MSIE', name: 'ie' }
+        { str: navigator.userAgent, sub: 'MSIE', ver: 'MSIE', name: 'ie' },
+        { str: navigator.userAgent, sub: 'Trident/7.0', ver: 'rv', name: 'ie' }
     ];
     var v = function (s, n) {
         var i = s.indexOf(data[n].ver);
-        return (i !== -1) ? parseInt(s.substring(i + data[n].ver.length + 1), 10) : '';
+        return (i !== -1) ? parseFloat(s.substring(i + data[n].ver.length + 1)) : 0;
     };
+    var result = { name: 'unknown', version: 0 };
     var html = $('html');
     for (var n = 0; n < data.length; n++) {
+        if (!result[data[n].name]) {
+            result[data[n].name] = false;
+        }
         if ((data[n].str && (data[n].str.indexOf(data[n].sub) !== -1)) || data[n].prop) {
-            html.addClass(data[n].name + ' ' + data[n].name + v(navigator.userAgent, n) || v(navigator.appVersion, n));
-            break;
+            result.name = data[n].name;
+            result[result.name] = true;
+            result.version = v(navigator.userAgent, n) || v(navigator.appVersion, n);
+            html.addClass(result.name + ' ' + result.name + parseInt(result.version, 10));
         }
     }
+    return result;
+} (jQuery);
 
-    // 'desktop' class is used as responsive design initial value
-    html.addClass('desktop');
-})(jQuery);
+jQuery(function ($) {
+    if (typeof responsiveDesign === "undefined") {
+        $("html").addClass("desktop");
+    }
+});
 
 jQuery(function ($) {
     'use strict';
     var i, j, k, l, m;
-    if (!$.browser.msie || parseInt($.browser.version, 10) !== 9) {
+    if (!browser.ie || browser.version !== 9) {
         return;
     }
-
     var splitByTokens = function (str, startToken, endToken, last) {
         if (!last) {
             last = false;
@@ -129,6 +139,10 @@ jQuery(function ($) {
                         }
                         var stopColor = $.trim(stopValues[0]);
                         var stopOpacity = 1;
+                        if (stopColor == 'transparent') {
+                            stopColor = '#000000';
+                            stopOpacity = 0;
+                        }
                         var colorRgba = splitByTokens(stopColor, 'rgba(', ')', true);
                         var stopOffset = $.trim(stopValues[1]);
                         if (colorRgba !== "") {
@@ -184,34 +198,22 @@ jQuery(function ($) {
     }
 });
 
-jQuery(function ($) {
-    'use strict';
-    // ie < 9 slider multiple background fix
-    if (!$.browser.msie || $.browser.version > 8) return;
-    
-    function split(str) {
-        str = str.replace(/"/g, '').replace(/%20/g, '');
-        return  str.split(/\s*,\s*/);
-    }
-
-    $('.art-slider .art-slide-item').each(function () {
-        var bgs = split($(this).css('background-image'));
-        // needs to use the last image
-        if (bgs.length > 1) {
-            $(this).css("background-image", bgs[bgs.length - 1]);
-        }
-    });
-});
 
 jQuery(function ($) {
     "use strict";
     // ie8
-    if (!$.browser.msie || $.browser.version > 8) return;
-    $('.art-shapes').css('z-index', 1);
-    
+    if (!browser.ie || browser.version > 8) return;
+    $('.art-shapes').each(function () {
+        if ($(this).siblings('.art-slider').length) {
+            $(this).remove();
+        } else {
+            $(this).css('z-index', 1);
+        }
+    });
+
     // ie7
-    if (!$.browser.msie || $.browser.version > 7) return;
-    var textblockTexts = $('.art-textblock > div');
+    if (!browser.ie || browser.version > 7) return;
+    var textblockTexts = $('.art-textblock div[class$="-text"]');
     textblockTexts.each(function () {
         var tbText = $(this);
         var valign = tbText.css('vertical-align') ? tbText.css('vertical-align') : 'top';
@@ -236,12 +238,28 @@ jQuery(function ($) {
     });
 });
 
-/* Set wmode=transparent for iframes to show it under the menus, lightboxes etc. */
+/* Set wmode=transparent for youtube and other video hostings to show it under the menus, lightboxes etc. */
 jQuery(function ($) {
     "use strict";
+    var video = ["youtube"];
+
     $("iframe[src]").each(function () {
-        var iframe = $(this);
-        var src = iframe.attr("src");
+        var iframe = $(this),
+            src = iframe.attr("src"),
+            isVideo = false,
+            i;
+
+        for (i = 0; i < video.length; i++) {
+            if (src.toLowerCase().indexOf(video[i].toLowerCase()) !== -1) {
+                isVideo = true;
+                break;
+            }
+        }
+
+        if (!isVideo) {
+            return;
+        }
+
         if (src.lastIndexOf("?") !== -1) {
             src += "&amp;wmode=transparent";
         } else {
@@ -264,7 +282,8 @@ var navigatorResizeHandler = (function ($) {
             var slider = $(this);
             var sliderWidth = slider.width();
             var nav = slider.siblings(".art-slidenavigator");
-            if (nav.length) {
+            var navWidth = nav.outerWidth();
+            if (nav.length && navWidth < sliderWidth) {
                 // left offset
                 var left = nav.attr("data-left");
                 // (margin = containerWidth - (objectPosition + objectWidth)) < 0
@@ -276,10 +295,107 @@ var navigatorResizeHandler = (function ($) {
         });
     };
 })(jQuery);
-jQuery(window).bind("resize", (function ($) {
-    /*global responsiveDesign */
+
+var processElementMultiplyBg = (function ($) {
+    return (function (selector, info) {
+        if (!selector || !info || !info.bgimage || !info.bgposition || !info.images || !info.positions) return;
+        var path = "";
+        var script = $('head script[src*="script.js"]');
+        if (script.length) {
+            path = (script.attr('src') || '');
+            path = path.substr(0, path.lastIndexOf('/') + 1);
+        }
+        var html = '';
+        var el = $(selector);
+        var bgimages = info.images.split(",");
+        var bgpositions = info.positions.split(",");
+        for (var i = bgimages.length - 1; i >= 0; i--) {
+            var bgimage = $.trim(bgimages[i]);
+            if (bgimage === "")
+                continue;
+            var imgIdx = bgimage.lastIndexOf('images/');
+            var className = bgimage.substring(imgIdx + 7, bgimage.length - 6);
+            el.append("<div class=\"ie8fix " + className + "\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;background:" + bgimage.replace(/(images\/[^\/]+)$/, path + '$1') + " " + bgpositions[i] + " no-repeat\"></div>");
+        }
+        el.css('background-image', info.bgimage.replace(/(images\/[^\/]+)$/, path + '$1'));
+        el.css('background-position-x', "50%");
+        el.css('background-position-y', "50%");
+    });
+})(jQuery);
+
+
+var responsiveNavigator = (function ($) {
     "use strict";
     return function () {
+        if (typeof headerObjectResizer !== 'undefined' && headerObjectResizer.isPreview) return;
+
+        var sheet = $('.art-sheet');
+        var sheetWidth = sheet.outerWidth();
+
+        $(".art-slider").each(function () {
+            var currentSlider = $(this);
+            var currentSliderWidth = currentSlider.width();
+
+            var sliderNavigator = currentSlider.siblings(".art-slidenavigator");
+            if (sliderNavigator.length) {
+                var off = sheetLeftFunc(sheet, sliderNavigator);
+                var calcWidth = isContentSlider(sliderNavigator) ? currentSliderWidth : sheetWidth;
+
+                var navigatorWidth = sliderNavigator.outerWidth();
+                var offset = parseInt(sliderNavigator.attr('data-offset') || 0, 10);
+
+                // left offset
+                sliderNavigator.css('margin-left', '0px');
+
+                var left = parseFloat(sliderNavigator.attr("data-left"), 10);
+                var newLeft = off + uniToPx(left, navigatorWidth, calcWidth);
+                sliderNavigator.css('left', newLeft + 'px');
+
+
+                // reset top to original value
+                sliderNavigator.css("top", "");
+
+                // top
+                var navigatorHeight = sliderNavigator.outerHeight();
+                var uniy = parseFloat(sliderNavigator.attr('data-top'), 10);
+
+                var sliderHeight = parseInt(currentSlider.css('height'), 10);
+                var newTop = uniToPx(uniy, navigatorHeight, sliderHeight);
+
+                sliderNavigator.css("top", (newTop + offset) + 'px');
+            }
+        });
+    };
+})(jQuery);
+
+jQuery(function ($) {
+    "use strict";
+
+    if (typeof responsiveDesign === "undefined") {
+        $(window).bind("resize", responsiveNavigator);
+    }
+
+    $(window).on("load", function pageInitialize() {
+        $(window).trigger("resize");
+        $(window).off("load", pageInitialize);
+    });
+});
+
+
+/* Icons in Header should have display block.
+ * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
+ */
+if (browser.opera) {
+    jQuery(function ($) {
+        $(".art-header a[class$='tag-icon']").css("display", "block");
+    });
+}
+
+jQuery(function($) {
+    "use strict";
+     $(window).bind("resize", function () {
+        /*global responsiveDesign */
+        "use strict";
         if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
             return;
         var sheetLeft = $(".art-sheet").offset().left;
@@ -287,8 +403,8 @@ jQuery(window).bind("resize", (function ($) {
             var object = $(this);
             object.css("left", sheetLeft + "px");
         });
-    };
-})(jQuery));
+    });
+});
 
 jQuery(function($) {
     "use strict";
@@ -298,7 +414,7 @@ jQuery(function($) {
 
 jQuery(function ($) {
     "use strict";
-    if (!$.browser.msie || parseInt($.browser.version, 10) > 7) {
+    if (!browser.ie || browser.version > 7) {
         return;
     }
     $('ul.art-hmenu>li:not(:first-child)').each(function () { $(this).prepend('<span class="art-hmenu-separator"> </span>'); });
@@ -312,11 +428,7 @@ jQuery(function ($) {
 
 jQuery(function ($) {
     "use strict";
-    if (!$.browser.msie) {
-        return;
-    }
-    var ieVersion = parseInt($.browser.version, 10);
-    if (ieVersion > 7) {
+    if (!browser.ie || browser.version > 7) {
         return;
     }
 
@@ -344,15 +456,23 @@ jQuery(function ($) {
         }
     });
 });
-jQuery(function () {
+
+jQuery(function ($) {
     "use strict";
-    setHMenuOpenDirection({
-        container: "div.art-sheet",
-        defaultContainer: "#art-main",
-        menuClass: "art-hmenu",
-        leftToRightClass: "art-hmenu-left-to-right",
-        rightToLeftClass: "art-hmenu-right-to-left"
-    });
+    var setDirection = function() {
+        setHMenuOpenDirection({
+            container: "div.art-sheet",
+            defaultContainer: "#art-main",
+            menuClass: "art-hmenu",
+            leftToRightClass: "art-hmenu-left-to-right",
+            rightToLeftClass: "art-hmenu-right-to-left"
+        });
+    };
+    if (typeof responsiveDesign !== "undefined") {
+        $(window).on('responsive', setDirection);
+    } else {
+        setDirection();
+    }
 });
 
 var setHMenuOpenDirection = (function ($) {
@@ -408,11 +528,11 @@ jQuery(function ($) {
         
         if (mh < bh) {
             var r = bh - mh;
-            c.css('height', (c.outerHeight(true) + r) + 'px');
+            c.css('height', (c.parent().outerHeight(true) + r) + 'px');
         }
     });
 
-    if ($.browser.msie && parseInt($.browser.version, 10) < 8) {
+    if (browser.ie && browser.version < 8) {
         $(window).bind('resize', function() {
             var c = $('div.art-content');
             var s = c.parent().children('.art-layout-cell:not(.art-content)');
@@ -515,7 +635,7 @@ jQuery(function ($) {
     var rssIcons = $(".art-rss-tag-icon");
     if (rssIcons.length){
         fixRssIconLineHeight("art-rss-tag-icon");
-        if ($.browser.msie && parseInt($.browser.version, 10) < 9) {
+        if (browser.ie && browser.version < 9) {
             rssIcons.each(function () {
                 if ($.trim($(this).html()) === "") {
                     $(this).css("vertical-align", "middle");
@@ -524,135 +644,35 @@ jQuery(function ($) {
         }
     }
 });
-/**
-* @license 
-* jQuery Tools 1.2.6 Mousewheel
-* 
-* NO COPYRIGHTS OR LICENSES. DO WHAT YOU LIKE.
-* 
-* http://flowplayer.org/tools/toolbox/mousewheel.html
-* 
-* based on jquery.event.wheel.js ~ rev 1 ~ 
-* Copyright (c) 2008, Three Dub Media
-* http://threedubmedia.com 
-*
-* Since: Mar 2010
-* Date:  
-*/
-(function ($) {
-    'use strict';
-    $.fn.mousewheel = function (fn) {
-        return this[fn ? "bind" : "trigger"]("wheel", fn);
-    };
-
-    // special event config
-    $.event.special.wheel = {
-        setup: function () {
-            $.event.add(this, wheelEvents, wheelHandler, {});
-        },
-        teardown: function () {
-            $.event.remove(this, wheelEvents, wheelHandler);
-        }
-    };
-
-    // events to bind ( browser sniffed... )
-    var wheelEvents = !$.browser.mozilla ? "mousewheel" : // IE, opera, safari
-        "DOMMouseScroll" + ($.browser.version < "1.9" ? " mousemove" : ""); // firefox
-
-    // shared event handler
-    function wheelHandler(event) {
-        /*jshint validthis:true*/
-        
-        switch (event.type) {
-
-            // FF2 has incorrect event positions
-            case "mousemove":
-                return $.extend(event.data, { // store the correct properties
-                    clientX: event.clientX, clientY: event.clientY,
-                    pageX: event.pageX, pageY: event.pageY
-                });
-
-                // firefox
-            case "DOMMouseScroll":
-                $.extend(event, event.data); // fix event properties in FF2
-                event.delta = -event.detail / 3; // normalize delta
-                break;
-
-            // IE, opera, safari
-            case "mousewheel":
-                event.delta = event.wheelDelta / 120;
-                break;
-        }
-
-        event.type = "wheel"; // hijack the event
-        return $.event.handle.call(this, event, event.delta);
-    }
-
-})(jQuery);
-
-
 var ThemeLightbox = (function ($) {
     'use strict';
     return (function () {
-        var current;
         var images = $(".art-lightbox");
+        var current;
+        this.init = function (ctrl) {
+            $(".art-lightbox").mouseup({ _ctrl: ctrl }, function (e) {
+                if ((e.data._ctrl === true && !e.ctrlKey) || (e.which && e.which !== 1)) {
+                    return;
+                }
 
-        this.init = function () {
-            $(".art-lightbox").live("click", function (e) {
-                reload();
+                images = $(".art-lightbox");
+
                 current = images.index(this);
-                show(this);
-            });
 
-            $(".art-lightbox-wrapper .arrow.left:not(.disabled)").live("click", function () {
-                move(current - 1);
-            });
+                var imgContainer = $('.art-lightbox-wrapper');
+                if (imgContainer.length === 0) {
+                    imgContainer = $('<div class="art-lightbox-wrapper">').css('line-height', $(window).height() + "px")
+                    .appendTo($("body"));
 
-            $(".art-lightbox-wrapper .arrow.right:not(.disabled)").live("click", function () {
-                move(current + 1);
-            });
+                    var closeBtn = $('<div class="close"><div class="cw"> </div><div class="ccw"> </div><div class="close-alt">&#10007;</div></div>')
+                .click(close);
+                    closeBtn.appendTo(imgContainer);
+                    showArrows();
+                }
 
-            $(".art-lightbox-wrapper .active").live("click", function () {
-                move(current + 1);
-            });
-
-            $(".art-lightbox-wrapper .close").live("click", function () {
-                close();
+                move(current);
             });
         };
-
-        function show(src) {
-            var closeBtn = $('<div class="close"><div class="cw"> </div><div class="ccw"> </div><div class="close-alt">&#10007;</div></div>')
-                .click(close);
-
-            var imgContainer = $('.art-lightbox-wrapper');
-            if (imgContainer.length === 0) {
-                imgContainer = $('<div class="art-lightbox-wrapper">').css('line-height', $(window).height() + "px")
-                    .appendTo($("body"));
-            }
-            
-            var img = $('<img class="art-lightbox-image active" src="' + getFullImgSrc($(src).attr("src")) + '">');
-            img.appendTo(imgContainer);
-
-            showArrows();
-            closeBtn.appendTo(imgContainer);
-            showLoader(true);
-
-            img.load(function () {
-                showLoader(false);
-            });
-
-            img.error(function () {
-                showLoader(false);
-                img.attr("src", $(src).attr("src"));
-            });
-
-            bindMouse($(".art-lightbox-wrapper .arrow").add(img).add(imgContainer));
-        }
-
-        function reload() {
-            images = $(".art-lightbox");
-        }
 
         function move(index) {
             if (index < 0 || index >= images.length) {
@@ -666,9 +686,17 @@ var ThemeLightbox = (function ($) {
             $(".art-lightbox-wrapper .art-lightbox-image:not(.active)").remove();
 
             var active = $(".art-lightbox-wrapper .active");
-            var target = $('<img class="art-lightbox-image" alt="" src="' + getFullImgSrc($(images[current]).attr("src")) + '" />');
+            var target = $('<img class="art-lightbox-image" alt="" src="' + getFullImgSrc($(images[current]).attr("src")) + '" />').click(function () {
+                if ($(this).hasClass("active")) {
+                    move(current + 1);
+                }
+            });
 
-            active.after(target);
+            if (active.length > 0) {
+                active.after(target);
+            } else {
+                $(".art-lightbox-wrapper").append(target);
+            }
 
             showArrows();
             showLoader(true);
@@ -692,8 +720,24 @@ var ThemeLightbox = (function ($) {
 
         function showArrows() {
             if ($(".art-lightbox-wrapper .arrow").length === 0) {
-                $(".art-lightbox-wrapper").append($('<div class="arrow left"><div class="arrow-t ccw"> </div><div class="arrow-b cw"> </div><div class="arrow-left-alt">&#8592;</div></div>').css("top", $(window).height() / 2 - 40));
-                $(".art-lightbox-wrapper").append($('<div class="arrow right"><div class="arrow-t cw"> </div><div class="arrow-b ccw"> </div><div class="arrow-right-alt">&#8594;</div></div>').css("top", $(window).height() / 2 - 40));
+                $(".art-lightbox-wrapper").append(
+                    $('<div class="arrow left"><div class="arrow-t ccw"> </div><div class="arrow-b cw"> </div><div class="arrow-left-alt">&#8592;</div></div>')
+                        .css("top", $(window).height() / 2 - 40)
+                        .click(function () {
+                            if (!$(this).hasClass("disabled")) {
+                                move(current - 1);
+                            }
+                        })
+                );
+                $(".art-lightbox-wrapper").append(
+                    $('<div class="arrow right"><div class="arrow-t cw"> </div><div class="arrow-b ccw"> </div><div class="arrow-right-alt">&#8594;</div></div>')
+                        .css("top", $(window).height() / 2 - 40)
+                        .click(function () {
+                            if (!$(this).hasClass("disabled")) {
+                                move(current + 1);
+                            }
+                        })
+                );
             }
 
             if (current === 0) {
@@ -732,13 +776,12 @@ var ThemeLightbox = (function ($) {
         };
 
         function bindMouse(img) {
-            img.unbind("wheel").mousewheel(function (event, delta) {
-                delta = delta > 0 ? 1 : -1;
+            img.bind('mousewheel DOMMouseScroll', function (e) {
+                var orgEvent = window.event || e.originalEvent;
+                var delta = (orgEvent.wheelDelta ? orgEvent.wheelDelta : orgEvent.detail * -1) > 0 ? 1 : -1;
                 move(current + delta);
-                event.preventDefault();
-            });
-
-            img.mousedown(function (e) {
+                e.preventDefault();
+            }).mousedown(function (e) {
                 // close on middle button click
                 if (e.which === 2) {
                     close();
@@ -750,9 +793,7 @@ var ThemeLightbox = (function ($) {
         function getFullImgSrc(src) {
             var fileName = src.substring(0, src.lastIndexOf('.'));
             var ext = src.substring(src.lastIndexOf('.'));
-            src = fileName + "-large" + ext;
-
-            return src;
+            return fileName + "-large" + ext;
         }
 
     });
@@ -763,10 +804,10 @@ jQuery(function () {
     new ThemeLightbox().init();
 });
 
-(function($) {
+(function ($) {
     'use strict';
     // transition && transitionEnd && browser prefix
-    $.support.transition = (function() {
+    $.support.themeTransition = (function () {
         var thisBody = document.body || document.documentElement,
             thisStyle = thisBody.style,
             support = thisStyle.transition !== undefined ||
@@ -775,30 +816,17 @@ jQuery(function () {
                 thisStyle.MsTransition !== undefined ||
                 thisStyle.OTransition !== undefined;
         return support && {
-            event: (function() {
-                var e = "transitionend";
-                if ($.browser.opera) {
-                    var version = parseFloat($.browser.version);
-                    e = version >= 12 ? (version < 12.50 ? "otransitionend" : "transitionend") : "oTransitionEnd";
-                } else if ($.browser.webkit) {
-                    e = "webkitTransitionEnd";
-                }
-                return e;
+            event: (function () {
+                return "transitionend webkitTransitionEnd otransitionend oTransitionEnd";
             })(),
-            prefix: (function() {
-                var result;
-                $.each($.browser, function(key, value) {
-                    if (key === "version") {
-                        return true;
-                    }
-                    return (result = {
-                        opera: "-o-",
-                        mozilla: "-moz-",
-                        webkit: "-webkit-",
-                        msie: "-ms-"
-                    }[key]) ? false : true;
-                });
-                return result || "";
+            prefix: (function () {
+                return ({
+                    opera: "-o-",
+                    firefox: "-moz-",
+                    chrome: "-webkit-",
+                    safari: "-webkit-",
+                    ie: ""
+                }[browser.name] || "");
             })()
         };
     })();
@@ -810,19 +838,23 @@ jQuery(function () {
         var width = 0;
         var height = 0;
         var multiplier = 1;
+        var originalWidth = 0;
+        var originalHeight = 0;
         var transitionDuration = "";
 
-        this.init = function(motionType, dir, duration) {
+        this.init = function (motionType, dir, duration) {
             direction = dir;
             motion = motionType;
             slides = [];
             width = 0;
             height = 0;
             multiplier = 1;
+            originalWidth = 0;
+            originalHeight = 0;
             transitionDuration = duration;
         };
 
-        this.processSlide = function(element, modify) {
+        this.processSlide = function (element, modify) {
             this.updateSize(element, null);
             var pos = [];
 
@@ -831,10 +863,13 @@ jQuery(function () {
             $.each(positions, function (i) {
                 var position = $.trim(this);
                 var point = position.split(" ");
+                var zeroValue = browser.ie && browser.version >= 10 ? 0.1 : 0;
                 if (point.length > 1) {
-                    var x = parseInt(point[0], 10);
-                    var y = parseInt(point[1], 10);
+                    var x = point[0].indexOf('%') === -1 ? parseFloat(point[0], 10) : zeroValue;
+                    var y = point[1].indexOf('%') === -1 ? parseFloat(point[1], 10) : zeroValue;
                     pos.push({ x: x, y: y });
+                } else {
+                    pos.push({ x: zeroValue, y: zeroValue });
                 }
             });
 
@@ -843,16 +878,17 @@ jQuery(function () {
                 "sizes": element.css("background-size"),
                 "positions": pos
             });
-            
+
             if (modify)
                 element.css("background-image", "none");
         };
-        
+
         this.updateSize = function (element, initialSize) {
             width = element.outerWidth(false);
             height = element.outerHeight();
             if (initialSize && parseInt(initialSize.width, 10) !== 0) {
-                multiplier = width / initialSize.width;
+                originalWidth = parseInt(initialSize.width, 10);
+                originalHeight = parseInt(initialSize.height, 10);
                 if (motion === "fade") {
                     $.each(element.children(), function (i) {
                         $(this).css("background-position", getCssPositions(slides[i].positions, { x: 0, y: 0 }));
@@ -861,7 +897,7 @@ jQuery(function () {
             }
         };
 
-        this.setBackground = function(element, items) {
+        this.setBackground = function (element, items) {
             var bg = [];
             var sizes = [];
             $.each(items, function (i, o) {
@@ -870,14 +906,14 @@ jQuery(function () {
             });
             element.css({
                 "background-image": bg.join(", "),
-                "background-size": sizes.join(", "),
+                //"background-size": sizes.join(", "),
                 "background-repeat": "no-repeat"
             });
         };
 
-        this.setPosition = function(element, items) {
+        this.setPosition = function (element, items) {
             var pos = [];
-            $.each(items, function(i, o) {
+            $.each(items, function (i, o) {
                 pos.push(o.positions);
             });
             element.css({
@@ -885,11 +921,11 @@ jQuery(function () {
             });
         };
 
-        this.current = function(index) {
+        this.current = function (index) {
             return slides[index] || null;
         };
 
-        this.next = function(index) {
+        this.next = function (index) {
             var next;
             if (direction === "next") {
                 next = (index + 1) % slides.length;
@@ -902,33 +938,37 @@ jQuery(function () {
             return slides[next];
         };
 
-        this.items = function(prev, next, move) {
+        this.items = function (prev, next, move) {
             var prevItem = { x: 0, y: 0 };
             var nextItem = { x: 0, y: 0 };
             var isDirectionNext = direction === "next";
+            var verticalOffset = -(originalHeight - height) / 2;
+            var horizontalOffset = -(originalWidth - width) / 2;
             if (motion === "horizontal") {
-                nextItem.x = isDirectionNext ? width : -width;
-                nextItem.y = 0;
+                prevItem.y = nextItem.y = -(originalHeight - height) / 2;
+                prevItem.x = horizontalOffset;
+                nextItem.x = (isDirectionNext ? originalWidth : -originalWidth) + horizontalOffset;
                 if (move) {
-                    prevItem.x += isDirectionNext ? -width : width;
-                    nextItem.x += isDirectionNext ? -width : width;
+                    prevItem.x += isDirectionNext ? -originalWidth : originalWidth;
+                    nextItem.x += isDirectionNext ? -originalWidth : originalWidth;
                 }
             } else if (motion === "vertical") {
-                nextItem.x = 0;
-                nextItem.y = isDirectionNext ? height : -height;
+                prevItem.x = nextItem.x = horizontalOffset;
+                prevItem.y = verticalOffset;
+                nextItem.y = (isDirectionNext ? originalHeight : -originalHeight) + verticalOffset;
                 if (move) {
-                    prevItem.y += isDirectionNext ? -height : height;
-                    nextItem.y += isDirectionNext ? -height : height;
+                    prevItem.y += isDirectionNext ? -originalHeight : originalHeight;
+                    nextItem.y += isDirectionNext ? -originalHeight : originalHeight;
                 }
             }
-            var result = [ ];
+            var result = [];
             if (!!prev) {
                 result.push({ images: prev.images, positions: getCssPositions(prev.positions, prevItem), sizes: prev.sizes });
             }
             if (!!next) {
                 result.push({ images: next.images, positions: getCssPositions(next.positions, nextItem), sizes: next.sizes });
             }
-            
+
             if (direction === "next") {
                 result.reverse();
             }
@@ -936,10 +976,10 @@ jQuery(function () {
             return result;
         };
 
-        this.transition = function(container, on) {
-            container.css($.support.transition.prefix + "transition", on ? transitionDuration + " ease-in-out background-position" : "");
+        this.transition = function (container, on) {
+            container.css($.support.themeTransition.prefix + "transition", on ? "background-position " + transitionDuration + " ease-in-out" : "");
         };
-        
+
         function getCssPositions(positions, offset) {
             var result = [];
             if (positions === undefined) {
@@ -948,14 +988,14 @@ jQuery(function () {
             offset.x = offset.x || 0;
             offset.y = offset.y || 0;
             for (var i = 0; i < positions.length; i++) {
-                result.push((positions[i].x * multiplier + offset.x) + "px " + (positions[i].y * multiplier + offset.y) + "px");
+                result.push((positions[i].x * 1 + offset.x) + "px " + (positions[i].y * 1 + offset.y) + "px");
             }
             return result.join(", ");
         }
     };
 
 
-    var Slider = function (element, settings) {
+    var ThemeSlider = function (element, settings) {
 
         var interval = null;
         var active = false;
@@ -963,7 +1003,7 @@ jQuery(function () {
         var last = false;
         var running = false;
 
-        this.settings = $.extend({ }, {
+        this.settings = $.extend({}, {
             "animation": "horizontal",
             "direction": "next",
             "speed": 600,
@@ -993,16 +1033,16 @@ jQuery(function () {
                 if (!this.settings.repeat) { last = true; active = false; return; }
             }
 
-            if ($.support.transition) {
+            if ($.support.themeTransition) {
                 nextItem.addClass(this.settings.direction);
                 tmp = nextItem.get(0).offsetHeight;
-                
+
                 activeItem.addClass(innerDirection);
                 nextItem.addClass(innerDirection);
-                
+
                 element.trigger("beforeSlide", children.length);
-                
-                element.one($.support.transition.event, function () {
+
+                element.one($.support.themeTransition.event, function () {
                     nextItem.removeClass(slider.settings.direction)
                         .removeClass(innerDirection)
                         .addClass("active");
@@ -1015,11 +1055,11 @@ jQuery(function () {
                 });
             } else {
                 element.trigger("beforeSlide", children.length);
-                
+
                 activeItem.removeClass("active");
                 nextItem.addClass("active");
                 active = false;
-                
+
                 element.trigger("afterSlide", children.length);
             }
 
@@ -1048,7 +1088,7 @@ jQuery(function () {
                     slider.to(index);
                 });
             }
-            
+
             if (activeIndex === index) {
                 return;
             }
@@ -1058,7 +1098,7 @@ jQuery(function () {
 
         this.next = function () {
             if (!active) {
-                if (last) { this.stop(); return;  }
+                if (last) { this.stop(); return; }
                 this.move("next");
             }
         };
@@ -1092,7 +1132,7 @@ jQuery(function () {
         this.moving = function () {
             return active;
         };
-        
+
         this.navigate(children.filter(".active"));
 
         if (this.settings.clickevents) {
@@ -1105,29 +1145,29 @@ jQuery(function () {
                 event.preventDefault();
             });
         }
-        
+
         if (this.settings.hover) {
             var slider = this;
             element.add(this.settings.navigator)
                    .add(element.siblings(".art-shapes")).hover(function () {
-                if (element.is(":visible") && !last) { slider.stop(true); }
-            }, function () {
-                if (element.is(":visible") && !last) { slider.start(); }
-            });
+                       if (element.is(":visible") && !last) { slider.stop(true); }
+                   }, function () {
+                       if (element.is(":visible") && !last) { slider.start(); }
+                   });
         }
     };
 
-    $.fn.slider = function (arg) {
+    $.fn.themeSlider = function (arg) {
         return this.each(function () {
             var element = $(this),
                 data = element.data("slider"),
                 options = typeof arg === "object" && arg;
 
             if (!data) {
-                data = new Slider(element, options);
+                data = new ThemeSlider(element, options);
                 element.data("slider", data);
             }
-            
+
             if (typeof arg === "string" && data[arg]) {
                 data[arg]();
             } else if (data.settings.auto && element.is(":visible")) {
@@ -1141,57 +1181,293 @@ jQuery(function () {
 
 
 
-jQuery(window).bind("resize", (function ($) {
-    /*global responsiveDesign */
-    "use strict";
-    return function () {
-        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive) {
-            $("header.art-header .art-shapes").children().css("left", "");
-            return;
-        }
-        var sheetWidth = $(".art-sheet").width();
-        var sheetLeft = $(".art-sheet").offset().left;
-        $("header.art-header .art-shapes>*, header.art-header>.art-textblock, header.art-header>h1, header.art-header>h2").each(function () {
-            var object = $(this);
-            var objectLeft = sheetWidth * parseFloat(object.attr("data-left") || "0") / 100 + sheetLeft;
-            object.css("left", objectLeft + "px");
-        });
-    };
-})(jQuery));
+if (typeof window.resizeData === 'undefined') window.resizeData = {};
+window.resizeData.headerPageWidth = true;
+if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-jQuery(function ($) {
-    "use strict";
-    $(window).trigger("resize"); 
-});
-jQuery(function ($) {
-    "use strict";
-    if (!$.browser.msie || parseInt($.browser.version, 10) > 8)
-        return;
-    var path = "";
-    var scripts = $("script[src*='script.js']");
-    if (scripts.length > 0) {
-        var src = scripts.last().attr('src');
-        path = src.substr(0, src.indexOf("script.js"));
+resizeData['headline'] = {
+   responsive: [
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 238,
+   height: 47,
+   autoWidth: true};
+
+resizeData['slogan'] = {
+   responsive: [
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 289,
+   height: 24,
+   autoWidth: true};
+
+// used to apply compicated values in style like '!important!
+function applyCss(object, param, value) {
+    var rg = new RegExp(param + '\s*:\s*[^;]+;', "i");
+    var style = object.attr('style');
+    var str = param + ': ' + value + ';';
+    if (rg.test(style)) {
+        style = style.replace(rg, str);
     }
-    processHeaderMultipleBg(path);
-});
+    else {
+        style += '; ' + str;
+    }
 
-var processHeaderMultipleBg = (function ($) {
-    "use strict";
-    return (function (path) {
-        var header = $(".art-header");
-        var bgimages = "".split(",");
-        var bgpositions = "".split(",");
-        for (var i = bgimages.length - 1; i >= 0; i--) {
-            var bgimage = $.trim(bgimages[i]);
-            if (bgimage === "")
-                continue;
-            if (path !== "") {
-                bgimage = bgimage.replace(/(url\(['"]?)/i, "$1" + path);
-            }
-            header.append("<div style=\"position:absolute;top:0;left:0;width:100%;height:100%;background:" + bgimage + " " + bgpositions[i] + " no-repeat\">");
+    object.attr('style', style);
+}
+
+// convert universal coord to pixels
+function uniToPx(uni, size, parentSize) {
+    uni = parseFloat(uni || '0');
+    if (uni < 0) {
+        uni = uni * size;
+    } else if (uni >= 1) {
+        uni = parentSize - (2 - uni) * size;
+    } else {
+        uni = uni * (parentSize - size);
+    }
+
+    return uni;
+}
+
+function isContentSlider(object) {
+    var isHeader = object.parents('header').length > 0;
+    if (isHeader) {
+        return false;
+    }
+    var isPageSlider = object.parents('.art-pageslider').length > 0;
+    if (isPageSlider)
+        return false;
+
+    return true;
+}
+
+function sheetLeftFunc(sheet, object) {
+    var sheetLeft = sheet.offset().left;
+
+    var isHeader = object.parents('header').length > 0;
+    if (isHeader) {
+        if (resizeData.headerPageWidth) return sheetLeft;
+    } else {
+        var isPageSlider = object.parents('.art-pageslider').length > 0;
+        if (isPageSlider) {
+            if (resizeData.pageSliderPageWidth) return sheetLeft;
         }
-        header.css('background-image', "url('images/header.png')".replace(/(url\(['"]?)/i, "$1" + path));
-        header.css('background-position', "center top");
+    }
+
+    return 0;
+}
+
+var headerObjectResizer = {
+    
+    postInit: false,
+
+    resize: (function ($) {
+        'use strict';
+        return function () {
+            if (!headerObjectResizer.postInit && typeof responsiveDesign !== 'undefined') {
+                $(window).on('responsiveResize', headerObjectResizer.resize);
+                headerObjectResizer.postInit = true;
+            }
+
+            var responsiveType = 0;
+            // if we don't use full custom responsive so we MUST cleanup all styles
+            var cleanUpStyles = false;
+            // when use default respo so while in desktop mode always use 0-type, in other case cleanup our styles
+            if (typeof responsiveDesign !== 'undefined' && 
+                    defaultResponsiveData[responsiveDesign.responsiveTypeIdx] &&
+                    responsiveDesign.isResponsive) {
+                cleanUpStyles = true;
+            }
+
+            if (typeof responsiveDesign !== 'undefined') {
+                if (responsiveDesign.responsiveType === 'tabletlandscape') {
+                    responsiveType = 1;
+                } else if (responsiveDesign.responsiveType === 'tabletportrait') {
+                    responsiveType = 2;
+                } else if (responsiveDesign.responsiveType === 'phonelandscape') {
+                    responsiveType = 3;
+                } else if (responsiveDesign.responsiveType === 'phoneportrait') {
+                    responsiveType = 4;
+                }
+            }
+
+            var sheet = $('.art-sheet');
+            var sheetWidth = sheet.outerWidth();
+
+            var header = $('header');
+            var height = 0;
+            var cssPrefix = 'art-';
+
+            // move html shapes
+            var headerQuery = 'header.art-header .art-shapes>*, header.art-header .art-textblock, header.art-header>.art-headline, header.art-header>.art-slogan, header.art-header>.art-positioncontrol, header.art-header>.art-logo';
+            var pageSliderQuery = '.art-pageslider .art-slide-item>*';
+            if (headerObjectResizer.isPreview) {
+                headerQuery = 'header .art-slider';
+                pageSliderQuery = '.art-pageslider .art-slider, .art-pageslider .art-textblock';
+            }
+            $(headerQuery + ', ' + pageSliderQuery).each(function () {
+                var object = $(this);
+                height = object.parent().height();
+
+                var off = sheetLeftFunc(sheet, object);
+
+                var cls = object.attr('class').split(' ');
+                $.each(cls, function (key, val) {
+                    val = $.trim(val);
+                    if (val.length === 0) return;
+                    if (val.indexOf(cssPrefix) !== 0) return;
+
+                    val = val.substring(cssPrefix.length);
+                    var data = resizeData[val];
+                    if (typeof data === 'undefined') return;
+
+                    if (cleanUpStyles) {
+                        object.css('display', '');
+                        object.css('left', '');
+                        object.css('margin-left', '');
+                    }
+
+                    var respData = data.responsive[responsiveType];
+                    if (respData.visible) {
+                        object.css('display', '');
+                    } else {
+                        applyCss(object, 'display', 'none !important');
+                    }
+
+                    if (cleanUpStyles || !respData.visible) return false;
+
+                    var x = uniToPx(respData.left, data.autoWidth ? object.width() : data.width, sheetWidth);
+                    x += off;
+
+                    var y = uniToPx(respData.top, data.height, height);
+
+                    object.css('left', x + 'px');
+                    object.css('top', y + 'px');
+                    applyCss(object, 'margin-left', '0px !important');
+                    return false;
+                });
+            });
+
+            // move images in slide's background-images
+            var slides = $('.art-slide-item').add(header);
+            if (browser.ie && browser.version <= 8) {
+                slides = slides.add('.art-slide-item .ie8fix');
+            }
+            $.each(slides, function (slideIdx, slide) {
+                slide = $(slide);
+
+                if (slide.closest('.art-collage').length > 0 || cleanUpStyles) {
+                    slide.css('background-position', '');
+                    return;
+                }
+
+                var slideVisible = slide.is(':visible');
+                if (!slideVisible && browser.ie) {
+                    slide.css('display', 'block');
+                }
+
+                var off = sheetLeftFunc(sheet, slide);
+
+                if (browser.ie && browser.version <= 8) {
+                    var s = slide.attr('style');
+                    if (s) {
+                        s = s.replace(/background\-position[^;]+/, '');
+                        slide.attr('style', s);
+                    }
+                } else {
+                    slide.css('background-position', '');
+                }
+                slide.css('background-size', '');
+
+                var bgImage = slide.css('background-image') ? slide.css('background-image').split(',') : [];
+                var bgPosition = slide.css('background-position') && (slide.css('background-position').replace(/[0][^\d]+/gi, '')).length > 0 ?
+                    slide.css('background-position').split(',') :
+                    [];
+                if (bgImage.length !== bgPosition.length) {
+                    slide.css('display', '');
+                    return;
+                }
+
+                height = slide.height();
+                if (height === 0) height = slide.parent().height();
+
+                $.each(bgImage, function (idx, val) {
+                    var findImageIdx = val.lastIndexOf('images/');
+                    var findDotIdx = val.lastIndexOf('.');
+                    if (findImageIdx === -1 || findDotIdx === -1) return;
+
+                    var name = val.substring(findImageIdx + 7, findDotIdx);
+
+                    var data = resizeData[name];
+                    if (typeof data === 'undefined') return;
+
+                    var respData = data.responsive[responsiveType];
+                    // big default coordinates for hiding
+                    var x = 9999, y = 9999;
+                    if (respData.visible) {
+                        x = uniToPx(respData.left, data.width, sheetWidth);
+                        x += off + data.area.x;
+
+                        y = uniToPx(respData.top, data.height, height);
+                        y += data.area.y;
+                    }
+
+                    bgPosition[idx] = x + 'px ' + y + 'px';
+                });
+
+                slide.css('background-position', bgPosition.join(','));
+
+                if (!slideVisible && browser.ie) {
+                    slide.css('display', '');
+                }
+            });
+
+        };
+    })(jQuery),
+
+    initialize: function ($) {
+        if (!browser.ie || browser.version > 8) {
+            $(window).on('resize', this.resize);
+        } else {
+            var resizeTimeout;
+            var self = this;
+            $(window).on("resize", function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function () { self.resize(); }, 25);
+            });
+        }
+    }
+};
+
+headerObjectResizer.initialize(jQuery);
+jQuery(function ($) {
+    "use strict";
+    if (!browser.ie || browser.version > 8)
+        return;
+    processElementMultiplyBg(".art-header", {
+        "bgimage": "url('images/header.jpg')",
+        "bgposition": "center top",
+        "images": "",
+        "positions": ""
     });
 });
+if (typeof window.resizeData === 'undefined') window.resizeData = {};
+
+window.resizeData.pageSliderPageWidth = false;
