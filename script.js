@@ -1182,40 +1182,24 @@ jQuery(function () {
 
 
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
-window.resizeData.headerPageWidth = true;
+window.resizeData.headerPageWidth = false;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-resizeData['headline'] = {
+resizeData['object0'] = {
    responsive: [
-                  { left: 0.84, top: 0.01, visible: true }, 
-                  { left: 0.84, top: 0.01, visible: true }, 
-                  { left: 0.84, top: 0.01, visible: true }, 
-                  { left: 0.84, top: 0.01, visible: true }, 
-                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.35, top: 0.29, visible: true }, 
+                  { left: 0.35, top: 0.29, visible: true }, 
+                  { left: 0.35, top: 0.29, visible: true }, 
+                  { left: 0.35, top: 0.29, visible: true }, 
+                  { left: 0.35, top: 0.29, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 238,
-   height: 47,
-   autoWidth: true};
-
-resizeData['slogan'] = {
-   responsive: [
-                  { left: 0.84, top: 0.12, visible: true }, 
-                  { left: 0.84, top: 0.12, visible: true }, 
-                  { left: 0.84, top: 0.12, visible: true }, 
-                  { left: 0.84, top: 0.12, visible: true }, 
-                  { left: 0.84, top: 0.12, visible: true }, 
-               ],
-   area: {
-       x: 0,
-       y: 0
-   },
-   width: 289,
-   height: 24,
-   autoWidth: true};
+   width: 590,
+   height: 200,
+   autoWidth: false};
 
 // used to apply compicated values in style like '!important!
 function applyCss(object, param, value) {
@@ -1462,10 +1446,10 @@ jQuery(function ($) {
     if (!browser.ie || browser.version > 8)
         return;
     processElementMultiplyBg(".art-header", {
-        "bgimage": "url('images/header.jpg')",
-        "bgposition": "center top",
-        "images": "",
-        "positions": ""
+        "bgimage": "url('images/header.png')",
+        "bgposition": "0 0",
+        "images": "url('images/object0.png'), ",
+        "positions": "99px 15px, "
     });
 });
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
