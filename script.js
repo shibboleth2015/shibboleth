@@ -395,30 +395,6 @@ jQuery(function($) {
     "use strict";
     $('nav.art-nav').addClass("desktop-nav");
 });
-jQuery(function ($) {
-    "use strict";
-    $(window).bind('resize', function() {
-        var pageWidth = $('#art-main').width();
-        var nav = $('nav.art-nav');
-        nav.css('left', (nav.parent().width() - pageWidth) / 2 + 'px').css('width', pageWidth + 'px');
-    });
-});
-
-jQuery(window).bind('resize', (function ($) {
-    "use strict";
-    return function() {
-        var menu = jQuery("nav.art-nav");
-        var menuOffset = menu.offset();
-        var pageOffset = jQuery('#art-main').offset();
-        if (!menuOffset || !pageOffset) {
-            return;
-        }
-        jQuery("#art-hmenu-bg").css({
-            "height": menu.outerHeight() + "px",
-            "top": (menuOffset.top - pageOffset.top) + "px"
-        });
-    };
-})(jQuery));
 
 
 jQuery(function ($) {
@@ -516,6 +492,10 @@ var setHMenuOpenDirection = (function ($) {
     });
 })(jQuery);
 
+jQuery(function ($) {
+    $("ul.art-hmenu ul li").hover(function () { $(this).prev().children("a").addClass("art-hmenu-before-hovered"); }, 
+        function () { $(this).prev().children("a").removeClass("art-hmenu-before-hovered"); });
+});
 
 jQuery(function($) {
     "use strict";
@@ -534,6 +514,23 @@ jQuery(function($) {
 
 jQuery(function ($) {
     'use strict';
+    $(window).bind('resize', function () {
+        var bh = $('body').height();
+        var mh = 0;
+        var c = $('div.art-content');
+        c.removeAttr('style');
+
+        $('#art-main').children().each(function() {
+            if ($(this).css('position') !== 'absolute') {
+                mh += $(this).outerHeight(true);
+            }
+        });
+        
+        if (mh < bh) {
+            var r = bh - mh;
+            c.css('height', (c.parent().outerHeight(true) + r) + 'px');
+        }
+    });
 
     if (browser.ie && browser.version < 8) {
         $(window).bind('resize', function() {
@@ -1185,56 +1182,24 @@ jQuery(function () {
 
 
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
-window.resizeData.headerPageWidth = true;
+window.resizeData.headerPageWidth = false;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
 resizeData['object0'] = {
    responsive: [
-                  { left: 0.5, top: 0, visible: true }, 
-                  { left: 0.5, top: 0, visible: true }, 
-                  { left: 0.5, top: 0, visible: true }, 
-                  { left: 0.5, top: 0, visible: true }, 
-                  { left: 0.5, top: 0, visible: true }, 
+                  { left: 0.01, top: 0.36, visible: true }, 
+                  { left: 0.01, top: 0.36, visible: true }, 
+                  { left: 0.01, top: 0.36, visible: true }, 
+                  { left: 0.01, top: 0.36, visible: true }, 
+                  { left: 0.01, top: 0.36, visible: true }, 
                ],
    area: {
-       x: -3,
-       y: -3
+       x: 0,
+       y: 0
    },
-   width: 1700,
-   height: 500,
+   width: 340,
+   height: 65,
    autoWidth: false};
-
-resizeData['headline'] = {
-   responsive: [
-                  { left: 0.02, top: 0.14, visible: true }, 
-                  { left: 0.02, top: 0.14, visible: true }, 
-                  { left: 0.02, top: 0.14, visible: true }, 
-                  { left: 0.02, top: 0.14, visible: true }, 
-                  { left: 0.02, top: 0.14, visible: true }, 
-               ],
-   area: {
-       x: 0,
-       y: 0
-   },
-   width: 183,
-   height: 55,
-   autoWidth: true};
-
-resizeData['slogan'] = {
-   responsive: [
-                  { left: 0.02, top: 0.25, visible: true }, 
-                  { left: 0.02, top: 0.25, visible: true }, 
-                  { left: 0.02, top: 0.25, visible: true }, 
-                  { left: 0.02, top: 0.25, visible: true }, 
-                  { left: 0.02, top: 0.25, visible: true }, 
-               ],
-   area: {
-       x: 0,
-       y: 0
-   },
-   width: 180,
-   height: 16,
-   autoWidth: true};
 
 // used to apply compicated values in style like '!important!
 function applyCss(object, param, value) {
@@ -1482,9 +1447,9 @@ jQuery(function ($) {
         return;
     processElementMultiplyBg(".art-header", {
         "bgimage": "url('images/header.png')",
-        "bgposition": "center top",
-        "images": "",
-        "positions": ""
+        "bgposition": "0 0",
+        "images": "url('images/object0.png'), ",
+        "positions": "8px 84px, "
     });
 });
 if (typeof window.resizeData === 'undefined') window.resizeData = {};

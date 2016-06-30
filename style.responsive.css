@@ -91,7 +91,8 @@
    max-width: none !important;
    min-height: 100px !important;
    min-width: 0 !important;
-   margin-top: 1%;
+   margin-right: 1% !important;
+   margin-left: 1% !important;
    text-align: center;
 }
 
@@ -238,6 +239,7 @@
 .responsive nav.art-nav
 {
    min-width: 1%;
+   margin-top: 1%;
 }
 
 .responsive .art-nav 
@@ -422,6 +424,7 @@
    max-width: none !important;
    margin-right: 1% !important;
    margin-left: 1% !important;
+   margin-top: 1% !important;
 }
 
 #art-resp {
@@ -534,5 +537,9 @@
 .responsive .art-footer-inner
 {
    min-width: 0;
+}
+.responsive .art-footer
+{
+   margin-top: 1%;
 }
 
