@@ -381,10 +381,44 @@ jQuery(function ($) {
     });
 });
 
+
+/* Icons in Header should have display block.
+ * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
+ */
+if (browser.opera) {
+    jQuery(function ($) {
+        $(".art-header a[class$='tag-icon']").css("display", "block");
+    });
+}
+
 jQuery(function($) {
     "use strict";
     $('nav.art-nav').addClass("desktop-nav");
 });
+jQuery(function ($) {
+    "use strict";
+    $(window).bind('resize', function() {
+        var pageWidth = $('#art-main').width();
+        var nav = $('nav.art-nav');
+        nav.css('left', (nav.parent().width() - pageWidth) / 2 + 'px').css('width', pageWidth + 'px');
+    });
+});
+
+jQuery(window).bind('resize', (function ($) {
+    "use strict";
+    return function() {
+        var menu = jQuery("nav.art-nav");
+        var menuOffset = menu.offset();
+        var pageOffset = jQuery('#art-main').offset();
+        if (!menuOffset || !pageOffset) {
+            return;
+        }
+        jQuery("#art-hmenu-bg").css({
+            "height": menu.outerHeight() + "px",
+            "top": (menuOffset.top - pageOffset.top) + "px"
+        });
+    };
+})(jQuery));
 
 
 jQuery(function ($) {
@@ -483,16 +517,6 @@ var setHMenuOpenDirection = (function ($) {
 })(jQuery);
 
 
-
-/* Icons in Header should have display block.
- * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
- */
-if (browser.opera) {
-    jQuery(function ($) {
-        $(".art-header a[class$='tag-icon']").css("display", "block");
-    });
-}
-
 jQuery(function($) {
     "use strict";
      $(window).bind("resize", function () {
@@ -510,23 +534,6 @@ jQuery(function($) {
 
 jQuery(function ($) {
     'use strict';
-    $(window).bind('resize', function () {
-        var bh = $('body').height();
-        var mh = 0;
-        var c = $('div.art-content');
-        c.removeAttr('style');
-
-        $('#art-main').children().each(function() {
-            if ($(this).css('position') !== 'absolute') {
-                mh += $(this).outerHeight(true);
-            }
-        });
-        
-        if (mh < bh) {
-            var r = bh - mh;
-            c.css('height', (c.parent().outerHeight(true) + r) + 'px');
-        }
-    });
 
     if (browser.ie && browser.version < 8) {
         $(window).bind('resize', function() {
@@ -1181,68 +1188,52 @@ if (typeof window.resizeData === 'undefined') window.resizeData = {};
 window.resizeData.headerPageWidth = true;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-resizeData['object552334598'] = {
-   responsive: [
-                  { left: -0.03, top: 0.44, visible: true }, 
-                  { left: -0.03, top: 0.44, visible: true }, 
-                  { left: -0.03, top: 0.44, visible: true }, 
-                  { left: -0.03, top: 0.44, visible: true }, 
-                  { left: -0.03, top: 0.44, visible: true }, 
-               ],
-   area: {
-       x: 0,
-       y: 0
-   },
-   width: 493,
-   height: 315,
-   autoWidth: false};
-
 resizeData['object0'] = {
    responsive: [
-                  { left: 1, top: 0.34, visible: true }, 
-                  { left: 1, top: 0.34, visible: true }, 
-                  { left: 1, top: 0.34, visible: true }, 
-                  { left: 1, top: 0.34, visible: true }, 
-                  { left: 1, top: 0.34, visible: true }, 
+                  { left: 0.5, top: 0, visible: true }, 
+                  { left: 0.5, top: 0, visible: true }, 
+                  { left: 0.5, top: 0, visible: true }, 
+                  { left: 0.5, top: 0, visible: true }, 
+                  { left: 0.5, top: 0, visible: true }, 
                ],
    area: {
-       x: 0,
-       y: 0
+       x: -3,
+       y: -3
    },
-   width: 714,
-   height: 216,
+   width: 1700,
+   height: 500,
    autoWidth: false};
 
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.1, top: 0.28, visible: true }, 
-                  { left: 0.1, top: 0.28, visible: true }, 
-                  { left: 0.1, top: 0.28, visible: true }, 
-                  { left: 0.1, top: 0.28, visible: true }, 
-                  { left: 0.1, top: 0.28, visible: true }, 
+                  { left: 0.02, top: 0.14, visible: true }, 
+                  { left: 0.02, top: 0.14, visible: true }, 
+                  { left: 0.02, top: 0.14, visible: true }, 
+                  { left: 0.02, top: 0.14, visible: true }, 
+                  { left: 0.02, top: 0.14, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 264,
-   height: 73,
+   width: 183,
+   height: 55,
    autoWidth: true};
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: 0.1, top: 0.46, visible: true }, 
-                  { left: 0.1, top: 0.46, visible: true }, 
-                  { left: 0.1, top: 0.46, visible: true }, 
-                  { left: 0.1, top: 0.46, visible: true }, 
-                  { left: 0.1, top: 0.46, visible: true }, 
+                  { left: 0.02, top: 0.25, visible: true }, 
+                  { left: 0.02, top: 0.25, visible: true }, 
+                  { left: 0.02, top: 0.25, visible: true }, 
+                  { left: 0.02, top: 0.25, visible: true }, 
+                  { left: 0.02, top: 0.25, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 276,
-   height: 22,
+   width: 180,
+   height: 16,
    autoWidth: true};
 
 // used to apply compicated values in style like '!important!

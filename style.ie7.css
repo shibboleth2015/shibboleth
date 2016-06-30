@@ -11,6 +11,18 @@
    zoom: 1;
 }
 
+.art-header
+{
+   z-index: 1;
+   background-image: [headerimage];
+   background-position: [headerposition];
+}
+
+#art-header-bg 
+{
+   display: none;
+}
+
 .art-hmenu>li, .art-hmenu>li>a
 {
    display: inline !important;
@@ -39,7 +51,7 @@ ul.art-hmenu>li>span.art-hmenu-separator
    top:0;
    left:  -1px;
    width: 1px;
-   height: 62px;
+   height: 47px;
    background: url('images/menuseparator.png') center center no-repeat;
 }
 ul.art-hmenu>li:first-child>span.art-hmenu-separator
@@ -48,19 +60,7 @@ ul.art-hmenu>li:first-child>span.art-hmenu-separator
 }
 
 ul.art-hmenu ul{
-   background-color: #0CA7DF !important;
-}
-
-.art-header
-{
-   z-index: 1;
-   background-image: [headerimage];
-   background-position: [headerposition];
-}
-
-#art-header-bg 
-{
-   display: none;
+   background-color: #426E9A !important;
 }
 
 .art-content-layout, .art-content-layout-row, .art-layout-cell 
@@ -127,22 +127,5 @@ form.art-search
 {
    width: auto;
    float:none;
-   background: none !important;
-   border: none !important;
-   zoom:expression(runtimeStyle.zoom=1, parentNode.parentNode.insertBefore(document.createElement('div'),parentNode.parentNode.firstChild).className='art-sidebar1-bg' + (className.indexOf('art-sidebar1-fix') == -1 ? '' : ' art-sidebar1-bg-fix' ));
-}
-
-.art-sidebar1-bg 
-{
-   position:absolute;
-   z-index:-2;
-   direction: ltr;
-   right:  0;
-   bottom:0;
-   top:0;
-   width: 225px;
-   overflow:hidden;
-   display:block;
-   background-color: #F3F3F6;
 }
 
