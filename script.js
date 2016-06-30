@@ -381,16 +381,6 @@ jQuery(function ($) {
     });
 });
 
-
-/* Icons in Header should have display block.
- * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
- */
-if (browser.opera) {
-    jQuery(function ($) {
-        $(".art-header a[class$='tag-icon']").css("display", "block");
-    });
-}
-
 jQuery(function($) {
     "use strict";
     $('nav.art-nav').addClass("desktop-nav");
@@ -492,10 +482,16 @@ var setHMenuOpenDirection = (function ($) {
     });
 })(jQuery);
 
-jQuery(function ($) {
-    $("ul.art-hmenu ul li").hover(function () { $(this).prev().children("a").addClass("art-hmenu-before-hovered"); }, 
-        function () { $(this).prev().children("a").removeClass("art-hmenu-before-hovered"); });
-});
+
+
+/* Icons in Header should have display block.
+ * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
+ */
+if (browser.opera) {
+    jQuery(function ($) {
+        $(".art-header a[class$='tag-icon']").css("display", "block");
+    });
+}
 
 jQuery(function($) {
     "use strict";
@@ -1182,24 +1178,72 @@ jQuery(function () {
 
 
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
-window.resizeData.headerPageWidth = false;
+window.resizeData.headerPageWidth = true;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-resizeData['object0'] = {
+resizeData['object552334598'] = {
    responsive: [
-                  { left: 0.01, top: 0.36, visible: true }, 
-                  { left: 0.01, top: 0.36, visible: true }, 
-                  { left: 0.01, top: 0.36, visible: true }, 
-                  { left: 0.01, top: 0.36, visible: true }, 
-                  { left: 0.01, top: 0.36, visible: true }, 
+                  { left: -0.03, top: 0.44, visible: true }, 
+                  { left: -0.03, top: 0.44, visible: true }, 
+                  { left: -0.03, top: 0.44, visible: true }, 
+                  { left: -0.03, top: 0.44, visible: true }, 
+                  { left: -0.03, top: 0.44, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 340,
-   height: 65,
+   width: 493,
+   height: 315,
    autoWidth: false};
+
+resizeData['object0'] = {
+   responsive: [
+                  { left: 1, top: 0.34, visible: true }, 
+                  { left: 1, top: 0.34, visible: true }, 
+                  { left: 1, top: 0.34, visible: true }, 
+                  { left: 1, top: 0.34, visible: true }, 
+                  { left: 1, top: 0.34, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 714,
+   height: 216,
+   autoWidth: false};
+
+resizeData['headline'] = {
+   responsive: [
+                  { left: 0.1, top: 0.28, visible: true }, 
+                  { left: 0.1, top: 0.28, visible: true }, 
+                  { left: 0.1, top: 0.28, visible: true }, 
+                  { left: 0.1, top: 0.28, visible: true }, 
+                  { left: 0.1, top: 0.28, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 264,
+   height: 73,
+   autoWidth: true};
+
+resizeData['slogan'] = {
+   responsive: [
+                  { left: 0.1, top: 0.46, visible: true }, 
+                  { left: 0.1, top: 0.46, visible: true }, 
+                  { left: 0.1, top: 0.46, visible: true }, 
+                  { left: 0.1, top: 0.46, visible: true }, 
+                  { left: 0.1, top: 0.46, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 276,
+   height: 22,
+   autoWidth: true};
 
 // used to apply compicated values in style like '!important!
 function applyCss(object, param, value) {
@@ -1447,9 +1491,9 @@ jQuery(function ($) {
         return;
     processElementMultiplyBg(".art-header", {
         "bgimage": "url('images/header.png')",
-        "bgposition": "0 0",
-        "images": "url('images/object0.png'), ",
-        "positions": "8px 84px, "
+        "bgposition": "center top",
+        "images": "",
+        "positions": ""
     });
 });
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
