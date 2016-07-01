@@ -491,7 +491,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
    background-repeat: no-repeat;
    height: 100px;
    background-image: url('images/object764025793.png'), url('images/header.png');
-   background-position: 6px 3px, 0 0;
+   background-position: 10px 8px, 0 0;
    position: relative;
    width: 900px;
    z-index: auto !important;
@@ -500,7 +500,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
 .custom-responsive .art-header
 {
    background-image: url('images/object764025793.png'), url('images/header.png');
-   background-position: 6px 3px, 0 0;
+   background-position: 10px 8px, 0 0;
 }
 
 .default-responsive .art-header,

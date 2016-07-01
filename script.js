@@ -1187,11 +1187,11 @@ if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiv
 
 resizeData['object764025793'] = {
    responsive: [
-                  { left: 0.01, top: 0.15, visible: true }, 
-                  { left: 0.01, top: 0.15, visible: true }, 
-                  { left: 0.01, top: 0.15, visible: true }, 
-                  { left: 0.01, top: 0.15, visible: true }, 
-                  { left: 0.01, top: 0.15, visible: true }, 
+                  { left: 0.02, top: 0.4, visible: true }, 
+                  { left: 0.02, top: 0.4, visible: true }, 
+                  { left: 0.02, top: 0.4, visible: true }, 
+                  { left: 0.02, top: 0.4, visible: true }, 
+                  { left: 0.02, top: 0.4, visible: true }, 
                ],
    area: {
        x: 0,
@@ -1449,7 +1449,7 @@ jQuery(function ($) {
         "bgimage": "url('images/header.png')",
         "bgposition": "0 0",
         "images": "url('images/object764025793.png'), ",
-        "positions": "6px 3px, "
+        "positions": "10px 8px, "
     });
 });
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
