@@ -48,13 +48,13 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
    -webkit-background-origin: border !important;
    -moz-background-origin: border !important;
    background-origin: border-box !important;
-   background: #E5E5E5;
-   background: -webkit-linear-gradient(top, #FCFCFC 0, #CFCFCF 100%) no-repeat;
-   background: -moz-linear-gradient(top, #FCFCFC 0, #CFCFCF 100%) no-repeat;
-   background: -o-linear-gradient(top, #FCFCFC 0, #CFCFCF 100%) no-repeat;
-   background: -ms-linear-gradient(top, #FCFCFC 0, #CFCFCF 100%) no-repeat;
-   -svg-background: linear-gradient(top, #FCFCFC 0, #CFCFCF 100%) no-repeat;
-   background: linear-gradient(to bottom, #FCFCFC 0, #CFCFCF 100%) no-repeat;
+   background: #73B078;
+   background: -webkit-linear-gradient(top, #89BD8E 0, #5CA362 100%) no-repeat;
+   background: -moz-linear-gradient(top, #89BD8E 0, #5CA362 100%) no-repeat;
+   background: -o-linear-gradient(top, #89BD8E 0, #5CA362 100%) no-repeat;
+   background: -ms-linear-gradient(top, #89BD8E 0, #5CA362 100%) no-repeat;
+   -svg-background: linear-gradient(top, #89BD8E 0, #5CA362 100%) no-repeat;
+   background: linear-gradient(to bottom, #89BD8E 0, #5CA362 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
@@ -662,13 +662,13 @@ ul.art-hmenu>li>a
 
 ul.art-hmenu>li>a.active
 {
-   background: #5D92AC;
-   background: -webkit-linear-gradient(top, #7FA8BD 0, #578DA8 60%, #49778D 100%) no-repeat;
-   background: -moz-linear-gradient(top, #7FA8BD 0, #578DA8 60%, #49778D 100%) no-repeat;
-   background: -o-linear-gradient(top, #7FA8BD 0, #578DA8 60%, #49778D 100%) no-repeat;
-   background: -ms-linear-gradient(top, #7FA8BD 0, #578DA8 60%, #49778D 100%) no-repeat;
-   -svg-background: linear-gradient(top, #7FA8BD 0, #578DA8 60%, #49778D 100%) no-repeat;
-   background: linear-gradient(to bottom, #7FA8BD 0, #578DA8 60%, #49778D 100%) no-repeat;
+   background: #73B078;
+   background: -webkit-linear-gradient(top, #93C297 0, #5CA362 85%, #56995C 100%) no-repeat;
+   background: -moz-linear-gradient(top, #93C297 0, #5CA362 85%, #56995C 100%) no-repeat;
+   background: -o-linear-gradient(top, #93C297 0, #5CA362 85%, #56995C 100%) no-repeat;
+   background: -ms-linear-gradient(top, #93C297 0, #5CA362 85%, #56995C 100%) no-repeat;
+   -svg-background: linear-gradient(top, #93C297 0, #5CA362 85%, #56995C 100%) no-repeat;
+   background: linear-gradient(to bottom, #93C297 0, #5CA362 85%, #56995C 100%) no-repeat;
    -webkit-border-radius:5px;
    -moz-border-radius:5px;
    border-radius:5px;
