@@ -1185,19 +1185,19 @@ if (typeof window.resizeData === 'undefined') window.resizeData = {};
 window.resizeData.headerPageWidth = false;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-resizeData['object406760129'] = {
+resizeData['object566127761'] = {
    responsive: [
-                  { left: 0, top: 0.2, visible: true }, 
-                  { left: 0, top: 0.2, visible: true }, 
-                  { left: 0, top: 0.2, visible: true }, 
-                  { left: 0, top: 0.2, visible: true }, 
-                  { left: 0, top: 0.2, visible: true }, 
+                  { left: 0.01, top: 0.3, visible: true }, 
+                  { left: 0.01, top: 0.3, visible: true }, 
+                  { left: 0.01, top: 0.3, visible: true }, 
+                  { left: 0.01, top: 0.3, visible: true }, 
+                  { left: 0.01, top: 0.3, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 240,
+   width: 400,
    height: 80,
    autoWidth: false};
 
@@ -1448,8 +1448,8 @@ jQuery(function ($) {
     processElementMultiplyBg(".art-header", {
         "bgimage": "url('images/header.png')",
         "bgposition": "0 0",
-        "images": "url('images/object406760129.png'), ",
-        "positions": "1px 4px, "
+        "images": "url('images/object566127761.png'), ",
+        "positions": "7px 6px, "
     });
 });
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
