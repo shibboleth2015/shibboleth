@@ -393,6 +393,21 @@ if (browser.opera) {
 
 jQuery(function($) {
     "use strict";
+     $(window).bind("resize", function () {
+        /*global responsiveDesign */
+        "use strict";
+        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
+            return;
+        var sheetLeft = $(".art-sheet").offset().left;
+        $("header.art-header #art-flash-area").each(function () {
+            var object = $(this);
+            object.css("left", sheetLeft + "px");
+        });
+    });
+});
+
+jQuery(function($) {
+    "use strict";
     $('nav.art-nav').addClass("desktop-nav");
 });
 
@@ -495,21 +510,6 @@ var setHMenuOpenDirection = (function ($) {
 jQuery(function ($) {
     $("ul.art-hmenu ul li").hover(function () { $(this).prev().children("a").addClass("art-hmenu-before-hovered"); }, 
         function () { $(this).prev().children("a").removeClass("art-hmenu-before-hovered"); });
-});
-
-jQuery(function($) {
-    "use strict";
-     $(window).bind("resize", function () {
-        /*global responsiveDesign */
-        "use strict";
-        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
-            return;
-        var sheetLeft = $(".art-sheet").offset().left;
-        $("header.art-header #art-flash-area").each(function () {
-            var object = $(this);
-            object.css("left", sheetLeft + "px");
-        });
-    });
 });
 
 jQuery(function ($) {
@@ -1182,24 +1182,40 @@ jQuery(function () {
 
 
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
-window.resizeData.headerPageWidth = false;
+window.resizeData.headerPageWidth = true;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-resizeData['object764025793'] = {
+resizeData['headline'] = {
    responsive: [
-                  { left: 0.02, top: 0.4, visible: true }, 
-                  { left: 0.02, top: 0.4, visible: true }, 
-                  { left: 0.02, top: 0.4, visible: true }, 
-                  { left: 0.02, top: 0.4, visible: true }, 
-                  { left: 0.02, top: 0.4, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
+                  { left: 0.84, top: 0.01, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 240,
-   height: 80,
-   autoWidth: false};
+   width: 238,
+   height: 47,
+   autoWidth: true};
+
+resizeData['slogan'] = {
+   responsive: [
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+                  { left: 0.84, top: 0.12, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 289,
+   height: 24,
+   autoWidth: true};
 
 // used to apply compicated values in style like '!important!
 function applyCss(object, param, value) {
@@ -1446,10 +1462,10 @@ jQuery(function ($) {
     if (!browser.ie || browser.version > 8)
         return;
     processElementMultiplyBg(".art-header", {
-        "bgimage": "url('images/header.png')",
-        "bgposition": "0 0",
-        "images": "url('images/object764025793.png'), ",
-        "positions": "10px 8px, "
+        "bgimage": "url('images/header.jpg')",
+        "bgposition": "center top",
+        "images": "",
+        "positions": ""
     });
 });
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
