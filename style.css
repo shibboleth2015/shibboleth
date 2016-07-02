@@ -661,13 +661,13 @@ ul.art-hmenu>li:last-child, ul.art-hmenu>li.last-child {
 
 ul.art-hmenu>li>a
 {
-   background: #746053 url('images/menuitem.png') scroll;
-   background: -webkit-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -webkit-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -moz-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -o-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -ms-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(to bottom, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: #746053;
+   background: -webkit-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -moz-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -o-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -ms-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   -svg-background: linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: linear-gradient(to bottom, #8C7463 0, #5F4F44 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -699,13 +699,13 @@ ul.art-hmenu>li>a
 
 ul.art-hmenu>li>a.active
 {
-   background: #59ABDE url('images/menuactiveitem.png') scroll;
-   background: -webkit-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -webkit-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -moz-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -o-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -ms-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(to bottom, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: #59ABDE;
+   background: -webkit-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -moz-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -o-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -ms-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   -svg-background: linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: linear-gradient(to bottom, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -725,13 +725,13 @@ ul.art-hmenu>li:hover>a {
 
 ul.art-hmenu>li>a:hover, .desktop ul.art-hmenu>li:hover>a
 {
-   background: #2A93D5 url('images/menuhovereditem.png') scroll;
-   background: -webkit-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -webkit-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -moz-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -o-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -ms-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(to bottom, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: #2A93D5;
+   background: -webkit-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -moz-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -o-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -ms-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   -svg-background: linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: linear-gradient(to bottom, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
