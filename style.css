@@ -2287,6 +2287,12 @@ tr.Navigator td, td span.Navigator
 .art-footer
 {
    background: #453931 url('images/footer.png') scroll;
+   background: -webkit-linear-gradient(top, rgba(104, 86, 74, 0.12) 0, rgba(33, 27, 23, 0.07) 100%) no-repeat, url('images/footer.png'), -webkit-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(104, 86, 74, 0.12) 0, rgba(33, 27, 23, 0.07) 100%) no-repeat, url('images/footer.png'), -moz-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(104, 86, 74, 0.12) 0, rgba(33, 27, 23, 0.07) 100%) no-repeat, url('images/footer.png'), -o-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(104, 86, 74, 0.12) 0, rgba(33, 27, 23, 0.07) 100%) no-repeat, url('images/footer.png'), -ms-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(104, 86, 74, 0.12) 0, rgba(33, 27, 23, 0.07) 100%) no-repeat, url('images/footer.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(104, 86, 74, 0.12) 0, rgba(33, 27, 23, 0.07) 100%) no-repeat, url('images/footer.png'), linear-gradient(to bottom, #5C4C42 0, #2D2520 100%) no-repeat;
    margin:0 auto;
    position: relative;
    color: #FFFFFF;
