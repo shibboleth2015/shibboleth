@@ -2144,7 +2144,7 @@ tr.Navigator td, td span.Navigator
 
 .art-footer
 {
-   background: #453931;
+   background: #453931 url('images/footer.png') scroll;
    margin:0 auto;
    position: relative;
    color: #FFFFFF;
