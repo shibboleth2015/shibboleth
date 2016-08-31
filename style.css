@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
    border:3px solid rgba(69, 57, 49, 0.8);
    padding:0 15px;
    margin:0 auto;
-   height:30px;
+   height:29px;
 }
 
 .art-postcontent,
@@ -412,7 +412,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
   min-width: 50px;
   top: 26px;
   left: 84.51%;
-  margin-left: -201px !important;
+  margin-left: -206px !important;
   line-height: 100%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -436,7 +436,7 @@ text-decoration: none;
 text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #000000 !important;
+  color: #FFFFFF !important;
   white-space: nowrap;
 }
 .art-slogan
@@ -447,7 +447,7 @@ text-shadow: 0px 0px 12px rgb(255, 255, 255);
   top: 92px;
   left: 88.35%;
   line-height: 100%;
-  margin-left: -261px !important;
+  margin-left: -270px !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -471,7 +471,7 @@ text-decoration: none;
 text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #000000 !important;
+  color: #F9FAFB !important;
 }
 
 
@@ -670,11 +670,11 @@ ul.art-hmenu>li>a
    margin:0 auto;
    position: relative;
    display: block;
-   height: 49px;
+   height: 48px;
    cursor: pointer;
    text-decoration: none;
    color: #FFFFFF;
-   line-height: 49px;
+   line-height: 48px;
    text-align: center;
 }
 
@@ -772,11 +772,11 @@ ul.art-hmenu li li ul>li:last-child
 {
    display: block;
    white-space: nowrap;
-   height: 25px;
+   height: 24px;
    min-width: 7em;
    border: 1px solid transparent;
    text-align: left;
-   line-height: 25px;
+   line-height: 24px;
    color: #081D2B;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -803,7 +803,7 @@ ul.art-hmenu li li ul>li:last-child
 .art-hmenu ul a:hover
 {
    text-align: left;
-   line-height: 25px;
+   line-height: 24px;
    color: #081D2B;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -1139,7 +1139,7 @@ button.art-button
    overflow: visible;
    cursor: pointer;
    text-indent: 0;
-   line-height: 30px;
+   line-height: 29px;
    -webkit-box-sizing: content-box;
    -moz-box-sizing: content-box;
    box-sizing: content-box;

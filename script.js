@@ -1197,7 +1197,7 @@ resizeData['headline'] = {
        x: 0,
        y: 0
    },
-   width: 238,
+   width: 244,
    height: 47,
    autoWidth: true};
 
@@ -1213,7 +1213,7 @@ resizeData['slogan'] = {
        x: 0,
        y: 0
    },
-   width: 296,
+   width: 306,
    height: 24,
    autoWidth: true};
 
