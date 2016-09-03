@@ -410,9 +410,9 @@ li p, .art-postcontent li p, .art-blockcontent li p
   display: inline-block;
   position: absolute;
   min-width: 50px;
-  top: 21px;
-  left: 83.99%;
-  margin-left: -204px !important;
+  top: 52px;
+  left: 2.38%;
+  margin-left: -5px !important;
   line-height: 100%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -444,10 +444,10 @@ text-shadow: 0px 0px 12px rgb(255, 255, 255);
   display: inline-block;
   position: absolute;
   min-width: 50px;
-  top: 74px;
-  left: 87.61%;
+  top: 104px;
+  left: 0%;
   line-height: 100%;
-  margin-left: -268px !important;
+  margin-left: -14px !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -471,7 +471,7 @@ text-decoration: none;
 text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #6E5B4E !important;
+  color: #FFFFFF !important;
 }
 
 
