@@ -410,9 +410,9 @@ li p, .art-postcontent li p, .art-blockcontent li p
   display: inline-block;
   position: absolute;
   min-width: 50px;
-  top: 38px;
-  left: 4.5%;
-  margin-left: -10px !important;
+  top: 25px;
+  left: 100%;
+  margin-left: -244px !important;
   line-height: 100%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -436,7 +436,7 @@ text-decoration: none;
 text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #3B9CD8 !important;
+  color: #FFFFFF !important;
   white-space: nowrap;
 }
 .art-slogan
@@ -444,10 +444,10 @@ text-shadow: 0px 0px 12px rgb(255, 255, 255);
   display: inline-block;
   position: absolute;
   min-width: 50px;
-  top: 92px;
-  left: 0.43%;
+  top: 81px;
+  left: 100%;
   line-height: 100%;
-  margin-left: -1px !important;
+  margin-left: -306px !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -471,7 +471,7 @@ text-decoration: none;
 text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #FFFFFF !important;
+  color: #CEC2BA !important;
 }
 
 
