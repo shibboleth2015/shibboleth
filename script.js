@@ -582,6 +582,11 @@ jQuery(function () {
     artButtonSetup("art-button");
 });
 
+jQuery(function($) {
+    'use strict';
+    $('input.art-search-button, form.art-search input[type="submit"]').attr('value', '');
+});
+
 var Control = (function ($) {
     'use strict';
     return (function () {
