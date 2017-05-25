@@ -1192,11 +1192,11 @@ if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiv
 
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.05, top: 0.09, visible: true }, 
-                  { left: 0.05, top: 0.09, visible: true }, 
-                  { left: 0.05, top: 0.09, visible: true }, 
-                  { left: 0.05, top: 0.09, visible: true }, 
-                  { left: 0.05, top: 0.09, visible: true }, 
+                  { left: 0.01, top: 0.09, visible: true }, 
+                  { left: 0.01, top: 0.09, visible: true }, 
+                  { left: 0.01, top: 0.09, visible: true }, 
+                  { left: 0.01, top: 0.09, visible: true }, 
+                  { left: 0.01, top: 0.09, visible: true }, 
                ],
    area: {
        x: 0,
@@ -1208,11 +1208,11 @@ resizeData['headline'] = {
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: -0.1, top: 0.22, visible: true }, 
-                  { left: -0.1, top: 0.22, visible: true }, 
-                  { left: -0.1, top: 0.22, visible: true }, 
-                  { left: -0.1, top: 0.22, visible: true }, 
-                  { left: -0.1, top: 0.22, visible: true }, 
+                  { left: -0.17, top: 0.21, visible: true }, 
+                  { left: -0.17, top: 0.21, visible: true }, 
+                  { left: -0.17, top: 0.21, visible: true }, 
+                  { left: -0.17, top: 0.21, visible: true }, 
+                  { left: -0.17, top: 0.21, visible: true }, 
                ],
    area: {
        x: 0,
