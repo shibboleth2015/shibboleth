@@ -1192,27 +1192,27 @@ if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiv
 
 resizeData['headline'] = {
    responsive: [
-                  { left: -0.27, top: 0.12, visible: true }, 
-                  { left: -0.27, top: 0.12, visible: true }, 
-                  { left: -0.27, top: 0.12, visible: true }, 
-                  { left: -0.27, top: 0.12, visible: true }, 
-                  { left: -0.27, top: 0.12, visible: true }, 
+                  { left: -0.12, top: 0.14, visible: true }, 
+                  { left: -0.12, top: 0.14, visible: true }, 
+                  { left: -0.12, top: 0.14, visible: true }, 
+                  { left: -0.12, top: 0.14, visible: true }, 
+                  { left: -0.12, top: 0.14, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 569,
+   width: 238,
    height: 47,
    autoWidth: true};
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: -0.23, top: 0.24, visible: true }, 
-                  { left: -0.23, top: 0.24, visible: true }, 
-                  { left: -0.23, top: 0.24, visible: true }, 
-                  { left: -0.23, top: 0.24, visible: true }, 
-                  { left: -0.23, top: 0.24, visible: true }, 
+                  { left: -0.27, top: 0.28, visible: true }, 
+                  { left: -0.27, top: 0.28, visible: true }, 
+                  { left: -0.27, top: 0.28, visible: true }, 
+                  { left: -0.27, top: 0.28, visible: true }, 
+                  { left: -0.27, top: 0.28, visible: true }, 
                ],
    area: {
        x: 0,
