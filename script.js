@@ -1202,7 +1202,7 @@ resizeData['headline'] = {
        x: 0,
        y: 0
    },
-   width: 238,
+   width: 569,
    height: 47,
    autoWidth: true};
 
