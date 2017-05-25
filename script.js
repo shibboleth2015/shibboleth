@@ -1208,11 +1208,11 @@ resizeData['headline'] = {
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: -0.21, top: 0.24, visible: true }, 
-                  { left: -0.21, top: 0.24, visible: true }, 
-                  { left: -0.21, top: 0.24, visible: true }, 
-                  { left: -0.21, top: 0.24, visible: true }, 
-                  { left: -0.21, top: 0.24, visible: true }, 
+                  { left: -0.23, top: 0.24, visible: true }, 
+                  { left: -0.23, top: 0.24, visible: true }, 
+                  { left: -0.23, top: 0.24, visible: true }, 
+                  { left: -0.23, top: 0.24, visible: true }, 
+                  { left: -0.23, top: 0.24, visible: true }, 
                ],
    area: {
        x: 0,
