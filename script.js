@@ -381,31 +381,6 @@ jQuery(function ($) {
     });
 });
 
-
-/* Icons in Header should have display block.
- * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
- */
-if (browser.opera) {
-    jQuery(function ($) {
-        $(".art-header a[class$='tag-icon']").css("display", "block");
-    });
-}
-
-jQuery(function($) {
-    "use strict";
-     $(window).bind("resize", function () {
-        /*global responsiveDesign */
-        "use strict";
-        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
-            return;
-        var sheetLeft = $(".art-sheet").offset().left;
-        $("header.art-header #art-flash-area").each(function () {
-            var object = $(this);
-            object.css("left", sheetLeft + "px");
-        });
-    });
-});
-
 jQuery(function($) {
     "use strict";
     $('nav.art-nav').addClass("desktop-nav");
@@ -512,25 +487,33 @@ jQuery(function ($) {
         function () { $(this).prev().children("a").removeClass("art-hmenu-before-hovered"); });
 });
 
+
+/* Icons in Header should have display block.
+ * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
+ */
+if (browser.opera) {
+    jQuery(function ($) {
+        $(".art-header a[class$='tag-icon']").css("display", "block");
+    });
+}
+
+jQuery(function($) {
+    "use strict";
+     $(window).bind("resize", function () {
+        /*global responsiveDesign */
+        "use strict";
+        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
+            return;
+        var sheetLeft = $(".art-sheet").offset().left;
+        $("header.art-header #art-flash-area").each(function () {
+            var object = $(this);
+            object.css("left", sheetLeft + "px");
+        });
+    });
+});
+
 jQuery(function ($) {
     'use strict';
-    $(window).bind('resize', function () {
-        var bh = $('body').height();
-        var mh = 0;
-        var c = $('div.art-content');
-        c.removeAttr('style');
-
-        $('#art-main').children().each(function() {
-            if ($(this).css('position') !== 'absolute') {
-                mh += $(this).outerHeight(true);
-            }
-        });
-        
-        if (mh < bh) {
-            var r = bh - mh;
-            c.css('height', (c.parent().outerHeight(true) + r) + 'px');
-        }
-    });
 
     if (browser.ie && browser.version < 8) {
         $(window).bind('resize', function() {
@@ -1187,16 +1170,16 @@ jQuery(function () {
 
 
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
-window.resizeData.headerPageWidth = true;
+window.resizeData.headerPageWidth = false;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.01, top: 0.09, visible: true }, 
-                  { left: 0.01, top: 0.09, visible: true }, 
-                  { left: 0.01, top: 0.09, visible: true }, 
-                  { left: 0.01, top: 0.09, visible: true }, 
-                  { left: 0.01, top: 0.09, visible: true }, 
+                  { left: 0.12, top: 0.06, visible: true }, 
+                  { left: 0.12, top: 0.06, visible: true }, 
+                  { left: 0.12, top: 0.06, visible: true }, 
+                  { left: 0.12, top: 0.06, visible: true }, 
+                  { left: 0.12, top: 0.06, visible: true }, 
                ],
    area: {
        x: 0,
@@ -1208,11 +1191,11 @@ resizeData['headline'] = {
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: -0.17, top: 0.21, visible: true }, 
-                  { left: -0.17, top: 0.21, visible: true }, 
-                  { left: -0.17, top: 0.21, visible: true }, 
-                  { left: -0.17, top: 0.21, visible: true }, 
-                  { left: -0.17, top: 0.21, visible: true }, 
+                  { left: 0.05, top: 0.2, visible: true }, 
+                  { left: 0.05, top: 0.2, visible: true }, 
+                  { left: 0.05, top: 0.2, visible: true }, 
+                  { left: 0.05, top: 0.2, visible: true }, 
+                  { left: 0.05, top: 0.2, visible: true }, 
                ],
    area: {
        x: 0,
@@ -1468,7 +1451,7 @@ jQuery(function ($) {
         return;
     processElementMultiplyBg(".art-header", {
         "bgimage": "url('images/header.jpg')",
-        "bgposition": "center top",
+        "bgposition": "0 0",
         "images": "",
         "positions": ""
     });
