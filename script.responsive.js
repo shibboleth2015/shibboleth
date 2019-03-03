@@ -368,6 +368,53 @@ jQuery(function ($) {
     responsiveNavigator(responsiveDesign);
 });
 
+var responsiveHeader = (function ($) {
+    "use strict";
+    return function(responsiveDesign) {
+        var header = $("header.art-header");
+        var headerSlider = header.find(".art-slider");
+
+        if (headerSlider.length) {
+            var firstSlide = headerSlider.find(".art-slide-item").first();
+            var slidebg = firstSlide.css("background-image").split(",");
+            var previousSibling = headerSlider.prev();
+            var sliderNav = headerSlider.siblings(".art-slidenavigator");
+            if (slidebg.length && responsiveDesign.isResponsive) {
+                // if prev is menu in header
+                if (previousSibling.is("nav.art-nav")) {
+                    sliderNav.attr("data-offset", previousSibling.height());
+                }
+            } else {
+                sliderNav.removeAttr("data-offset");
+                header.removeAttr("style");
+            }
+        }
+    };
+})(jQuery);
+
+jQuery(window).bind("responsiveResize", (function ($) {
+    "use strict";
+    return function (event, responsiveDesign) {
+        responsiveAbsBg(responsiveDesign, $(".art-header"), $("#art-header-bg"));
+    };
+})(jQuery));
+
+jQuery(window).bind("responsive", (function ($) {
+    "use strict";
+    return function (event, responsiveDesign) {
+        if (browser.ie && browser.version <= 8) return;
+
+        if (responsiveDesign.isResponsive) {
+            $(window).on("responsiveResize.header", function () {
+                responsiveHeader(responsiveDesign);
+            });
+        } else {
+            $(window).trigger("responsiveResize.header");
+            $(window).off("responsiveResize.header");
+        }
+    };
+})(jQuery));
+
 jQuery(window).bind("responsiveResize", (function ($) {
     "use strict";
     return function (event, responsiveDesign) {
@@ -429,53 +476,6 @@ jQuery(function($) {
         e.preventDefault();
     });
 });
-
-var responsiveHeader = (function ($) {
-    "use strict";
-    return function(responsiveDesign) {
-        var header = $("header.art-header");
-        var headerSlider = header.find(".art-slider");
-
-        if (headerSlider.length) {
-            var firstSlide = headerSlider.find(".art-slide-item").first();
-            var slidebg = firstSlide.css("background-image").split(",");
-            var previousSibling = headerSlider.prev();
-            var sliderNav = headerSlider.siblings(".art-slidenavigator");
-            if (slidebg.length && responsiveDesign.isResponsive) {
-                // if prev is menu in header
-                if (previousSibling.is("nav.art-nav")) {
-                    sliderNav.attr("data-offset", previousSibling.height());
-                }
-            } else {
-                sliderNav.removeAttr("data-offset");
-                header.removeAttr("style");
-            }
-        }
-    };
-})(jQuery);
-
-jQuery(window).bind("responsiveResize", (function ($) {
-    "use strict";
-    return function (event, responsiveDesign) {
-        responsiveAbsBg(responsiveDesign, $(".art-header"), $("#art-header-bg"));
-    };
-})(jQuery));
-
-jQuery(window).bind("responsive", (function ($) {
-    "use strict";
-    return function (event, responsiveDesign) {
-        if (browser.ie && browser.version <= 8) return;
-
-        if (responsiveDesign.isResponsive) {
-            $(window).on("responsiveResize.header", function () {
-                responsiveHeader(responsiveDesign);
-            });
-        } else {
-            $(window).trigger("responsiveResize.header");
-            $(window).off("responsiveResize.header");
-        }
-    };
-})(jQuery));
 
 var responsiveLayoutCell = (function ($) {
     "use strict";

@@ -381,6 +381,31 @@ jQuery(function ($) {
     });
 });
 
+
+/* Icons in Header should have display block.
+ * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
+ */
+if (browser.opera) {
+    jQuery(function ($) {
+        $(".art-header a[class$='tag-icon']").css("display", "block");
+    });
+}
+
+jQuery(function($) {
+    "use strict";
+     $(window).bind("resize", function () {
+        /*global responsiveDesign */
+        "use strict";
+        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
+            return;
+        var sheetLeft = $(".art-sheet").offset().left;
+        $("header.art-header #art-flash-area").each(function () {
+            var object = $(this);
+            object.css("left", sheetLeft + "px");
+        });
+    });
+});
+
 jQuery(function($) {
     "use strict";
     $('nav.art-nav').addClass("desktop-nav");
@@ -482,35 +507,6 @@ var setHMenuOpenDirection = (function ($) {
     });
 })(jQuery);
 
-jQuery(function ($) {
-    $("ul.art-hmenu ul li").hover(function () { $(this).prev().children("a").addClass("art-hmenu-before-hovered"); }, 
-        function () { $(this).prev().children("a").removeClass("art-hmenu-before-hovered"); });
-});
-
-
-/* Icons in Header should have display block.
- * Otherwise, in case of inline-block there's a space gap in some browsers (Opera 12.16) and icon is cutted.
- */
-if (browser.opera) {
-    jQuery(function ($) {
-        $(".art-header a[class$='tag-icon']").css("display", "block");
-    });
-}
-
-jQuery(function($) {
-    "use strict";
-     $(window).bind("resize", function () {
-        /*global responsiveDesign */
-        "use strict";
-        if (typeof responsiveDesign !== "undefined" && responsiveDesign.isResponsive)
-            return;
-        var sheetLeft = $(".art-sheet").offset().left;
-        $("header.art-header #art-flash-area").each(function () {
-            var object = $(this);
-            object.css("left", sheetLeft + "px");
-        });
-    });
-});
 
 jQuery(function ($) {
     'use strict';
@@ -1187,50 +1183,50 @@ if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiv
 
 resizeData['object0'] = {
    responsive: [
-                  { left: -0.02, top: 1, visible: true }, 
-                  { left: -0.02, top: 1, visible: true }, 
-                  { left: -0.02, top: 1, visible: true }, 
-                  { left: -0.02, top: 1, visible: true }, 
-                  { left: -0.02, top: 1, visible: true }, 
+                  { left: -0.03, top: -0.01, visible: true }, 
+                  { left: -0.03, top: -0.01, visible: true }, 
+                  { left: -0.03, top: -0.01, visible: true }, 
+                  { left: -0.03, top: -0.01, visible: true }, 
+                  { left: -0.03, top: -0.01, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 336.64,
-   height: 285.43,
+   width: 444,
+   height: 165,
    autoWidth: false};
 
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.99, top: 0.55, visible: true }, 
-                  { left: 0.99, top: 0.55, visible: true }, 
-                  { left: 0.99, top: 0.55, visible: true }, 
-                  { left: 0.99, top: 0.55, visible: true }, 
-                  { left: 0.99, top: 0.55, visible: true }, 
+                  { left: 0.15, top: 0.17, visible: true }, 
+                  { left: 0.15, top: 0.17, visible: true }, 
+                  { left: 0.15, top: 0.17, visible: true }, 
+                  { left: 0.15, top: 0.17, visible: true }, 
+                  { left: 0.15, top: 0.17, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 416,
-   height: 47,
+   width: 286,
+   height: 36,
    autoWidth: true};
 
 resizeData['slogan'] = {
    responsive: [
-                  { left: 0.99, top: 0.7, visible: true }, 
-                  { left: 0.99, top: 0.7, visible: true }, 
-                  { left: 0.99, top: 0.7, visible: true }, 
-                  { left: 0.99, top: 0.7, visible: true }, 
-                  { left: 0.99, top: 0.7, visible: true }, 
+                  { left: 0.15, top: 0.28, visible: true }, 
+                  { left: 0.15, top: 0.28, visible: true }, 
+                  { left: 0.15, top: 0.28, visible: true }, 
+                  { left: 0.15, top: 0.28, visible: true }, 
+                  { left: 0.15, top: 0.28, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 324,
-   height: 21,
+   width: 209,
+   height: 13,
    autoWidth: true};
 
 // used to apply compicated values in style like '!important!
