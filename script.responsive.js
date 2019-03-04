@@ -424,41 +424,41 @@ jQuery(window).bind("responsiveResize", (function ($) {
 })(jQuery));
 
 
-
-
-jQuery(function ($) {
+var menuInHeader;
+var menuInHeaderHack;
+var responsiveNav = (function ($) {
     "use strict";
-    $(".art-hmenu a")
-        .click(function(e) {
-            var link = $(this);
-            if ($(".responsive").length === 0)
-                return;
+    return function (responsiveDesign) {
+        var header = $(".art-header");
+        var nav = $('.art-nav:not(.art-bar)');
 
-            var item = link.parent("li");
-            
-            if (item.hasClass("active")) {
-                item.removeClass("active").children("a").removeClass("active");
-            } else {
-                item.addClass("active").children("a").addClass("active");
-            }
+        if (typeof menuInHeader === 'undefined') {
+            nav = $('.art-header .art-nav');
+            menuInHeader = nav.length !== 0;
+            menuInHeaderHack = false;
+        }
+        
+        if (!menuInHeader) return;
+        
+        if (responsiveDesign.isResponsive) {
+            if (menuInHeaderHack) return;
+            menuInHeaderHack = true;
+            nav.insertBefore(header);
+        } else {
+            if (!menuInHeaderHack) return;
+            menuInHeaderHack = false;
 
-            if (item.children("ul").length > 0) {
-                var href = link.attr("href");
-                link.attr("href", "#");
-                setTimeout(function () { 
-                    link.attr("href", href);
-                }, 300);
-                e.preventDefault();
-            }
-        })
-        .each(function() {
-            var link = $(this);
-            if (link.get(0).href === location.href) {
-                link.addClass("active").parents("li").addClass("active");
-                return false;
-            }
-        });
+            header.append(nav);
+        }
+    };
+})(jQuery);
+
+jQuery(window).bind("responsivePage", function (event, responsiveDesign) {
+    "use strict";
+    responsiveNav(responsiveDesign);
 });
+
+
 
 
 jQuery(function($) {
@@ -476,6 +476,16 @@ jQuery(function($) {
         e.preventDefault();
     });
 });
+
+jQuery(window).bind("responsiveNav", (function ($) {
+    /*global menuExtendedCreate */
+    "use strict";
+    return function (event, options) {
+        if (options.responsiveDesign.isDesktop && $("li.ext").length > 0) {
+            menuExtendedCreate();
+        }
+    };
+})(jQuery));
 
 var responsiveLayoutCell = (function ($) {
     "use strict";
