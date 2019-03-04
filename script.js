@@ -1209,29 +1209,13 @@ if (typeof window.resizeData === 'undefined') window.resizeData = {};
 window.resizeData.headerPageWidth = true;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
-resizeData['object2028646152'] = {
-   responsive: [
-                  { left: 0.01, top: 0.03, visible: true }, 
-                  { left: 0.01, top: 0.03, visible: true }, 
-                  { left: 0.01, top: 0.03, visible: true }, 
-                  { left: 0.01, top: 0.03, visible: true }, 
-                  { left: 0.01, top: 0.03, visible: true }, 
-               ],
-   area: {
-       x: 0,
-       y: 0
-   },
-   width: 252,
-   height: 71,
-   autoWidth: false};
-
 resizeData['object1213541190'] = {
    responsive: [
-                  { left: 1, top: 1, visible: true }, 
-                  { left: 1, top: 1, visible: true }, 
-                  { left: 1, top: 1, visible: true }, 
-                  { left: 1, top: 1, visible: true }, 
-                  { left: 1, top: 1, visible: true }, 
+                  { left: 0.95, top: 1, visible: true }, 
+                  { left: 0.95, top: 1, visible: true }, 
+                  { left: 0.95, top: 1, visible: true }, 
+                  { left: 0.95, top: 1, visible: true }, 
+                  { left: 0.95, top: 1, visible: true }, 
                ],
    area: {
        x: 0,
@@ -1241,36 +1225,36 @@ resizeData['object1213541190'] = {
    height: 500,
    autoWidth: false};
 
+resizeData['object1667649295'] = {
+   responsive: [
+                  { left: 0.04, top: 0.05, visible: true }, 
+                  { left: 0.04, top: 0.05, visible: true }, 
+                  { left: 0.04, top: 0.05, visible: true }, 
+                  { left: 0.04, top: 0.05, visible: true }, 
+                  { left: 0.04, top: 0.05, visible: true }, 
+               ],
+   area: {
+       x: 0,
+       y: 0
+   },
+   width: 237,
+   height: 87,
+   autoWidth: false};
+
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.02, top: 0.41, visible: true }, 
-                  { left: 0.02, top: 0.41, visible: true }, 
-                  { left: 0.02, top: 0.41, visible: true }, 
-                  { left: 0.02, top: 0.41, visible: true }, 
-                  { left: 0.02, top: 0.41, visible: true }, 
+                  { left: 0.02, top: 0.22, visible: true }, 
+                  { left: 0.02, top: 0.22, visible: true }, 
+                  { left: 0.02, top: 0.22, visible: true }, 
+                  { left: 0.02, top: 0.22, visible: true }, 
+                  { left: 0.02, top: 0.22, visible: true }, 
                ],
    area: {
        x: 0,
        y: 0
    },
-   width: 366,
-   height: 72,
-   autoWidth: true};
-
-resizeData['slogan'] = {
-   responsive: [
-                  { left: 0.02, top: 0.55, visible: true }, 
-                  { left: 0.02, top: 0.55, visible: true }, 
-                  { left: 0.02, top: 0.55, visible: true }, 
-                  { left: 0.02, top: 0.55, visible: true }, 
-                  { left: 0.02, top: 0.55, visible: true }, 
-               ],
-   area: {
-       x: 0,
-       y: 0
-   },
-   width: 328,
-   height: 49,
+   width: 296,
+   height: 28,
    autoWidth: true};
 
 // used to apply compicated values in style like '!important!
