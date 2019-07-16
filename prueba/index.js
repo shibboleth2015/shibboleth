@@ -1,3 +1,0 @@
-var jsfiles=['about.html', 'support.html', 'order.html', 'gettingstarted.html', 'mainmenu.html', 'toolbar.html', 'tutorial.html', 'task1.html', 'task2.html'];
-var jstitle=["About", "Support", "Order", "Getting Started", "Main Menu", "Toolbar", "Tutorial", "Task 1", "Task 2"];
-jswords={"1":[7], "2":[8], "ABOUT":[0], "GETTING":[3], "MAIN":[4], "MENU":[4], "ORDER":[2], "STARTED":[3], "SUPPORT":[1], "TASK":[7, 8], "TOOLBAR":[5], "TUTORIAL":[6]}
