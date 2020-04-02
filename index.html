@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.3.0.60858 -->
+<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.3.0.60745 -->
     <meta charset="utf-8">
     <title>Home</title>
     <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
@@ -15,10 +15,268 @@
     <script src="script.responsive.js"></script>
 
 
-<style>.art-content .art-postcontent-0 .layout-item-0 { border-top-width:2px;border-top-style:solid;border-top-color:#CCBD9E;margin-top: 10px;margin-bottom: 10px;  }
+<script>jQuery(function ($) {
+    'use strict';
+    if ($.fn.themeSlider) {
+        $(".art-slidecontainer21faf89206e84c89adc350b755a19469").each(function () {
+            var slideContainer = $(this), tmp;
+            var inner = $(".art-slider-inner", slideContainer);
+            inner.children().filter("script").remove();
+            var helper = null;
+            
+            if ($.support.themeTransition) {
+                helper = new BackgroundHelper();
+                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.themeTransition.prefix + "transition-duration"));
+                inner.children().each(function () {
+                    helper.processSlide($(this));
+                });
+
+                
+            } else if (browser.ie && browser.version <= 8) {
+                var slidesInfo = {
+".art-slide21faf89206e84c89adc350b755a194690": {
+    "bgimage" : "url('images/slide21faf89206e84c89adc350b755a194690.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+},
+".art-slide21faf89206e84c89adc350b755a194691": {
+    "bgimage" : "url('images/slide21faf89206e84c89adc350b755a194691.jpg')",
+    "bgposition": "0 0",
+    "images": "",
+    "positions": ""
+}
+                };
+                $.each(slidesInfo, function(selector, info) {
+                    processElementMultiplyBg(slideContainer.find(selector), info);
+                });
+            }
+
+            inner.children().eq(0).addClass("active");
+            slideContainer.themeSlider({
+                pause: 2600,
+                speed: 600,
+                repeat: true,
+                animation: "fade",
+                direction: "next",
+                navigator: slideContainer.siblings(".art-slidenavigator21faf89206e84c89adc350b755a19469"),
+                helper: helper
+            });
+            
+                        
+        });
+    }
+});
+</script><style>.art-content .art-postcontent-0 .layout-item-0 { border-top-width:2px;border-top-style:solid;border-top-color:#CCBD9E;margin-top: 10px;margin-bottom: 10px;  }
 .art-content .art-postcontent-0 .layout-item-1 { padding-right: 10px;padding-left: 10px;  }
 .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
 .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 {
+    position: relative;
+        width: 400px;
+    height: 236px;
+        }
+
+.default-responsive .art-header .art-slidecontainer21faf89206e84c89adc350b755a19469,
+.responsive .art-header .art-slidecontainer21faf89206e84c89adc350b755a19469
+{
+  position: absolute !important;
+}
+
+.responsive .art-pageslider .art-slidecontainer21faf89206e84c89adc350b755a19469 {
+  position: absolute !important;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .art-slide-item
+{
+
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    transform: rotate(0);
+}
+
+
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .art-slide-item {
+    -webkit-transition: 600ms ease-in-out opacity;
+    -moz-transition: 600ms ease-in-out opacity;
+    -ms-transition: 600ms ease-in-out opacity;
+    -o-transition: 600ms ease-in-out opacity;
+    transition: 600ms ease-in-out opacity;
+    position: absolute !important;
+    display: none;
+	left: 0;
+	top: 0;
+	opacity: 0;
+    width:  100%;
+    height: 100%;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .active, .art-slidecontainer21faf89206e84c89adc350b755a19469 .next, .art-slidecontainer21faf89206e84c89adc350b755a19469 .prev {
+    display: block;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .active {
+    opacity: 1;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .next, .art-slidecontainer21faf89206e84c89adc350b755a19469 .prev {
+    width: 100%;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .next.forward, .art-slidecontainer21faf89206e84c89adc350b755a19469 .prev.back {
+    opacity: 1;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .active.forward {
+    opacity: 0;
+}
+
+.art-slidecontainer21faf89206e84c89adc350b755a19469 .active.back {
+    opacity: 0;
+}
+
+
+.art-slide21faf89206e84c89adc350b755a194690 {
+    background-image:  url('images/slide21faf89206e84c89adc350b755a194690.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide21faf89206e84c89adc350b755a194690 {
+    background-image:  url('images/slide21faf89206e84c89adc350b755a194690.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide21faf89206e84c89adc350b755a194690 {
+    background-image:  url('images/slide21faf89206e84c89adc350b755a194690.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide21faf89206e84c89adc350b755a194690 {
+    background-image: url('images/slide21faf89206e84c89adc350b755a194690.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide21faf89206e84c89adc350b755a194690 {
+    background-image: url('images/slide21faf89206e84c89adc350b755a194690.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}.art-slide21faf89206e84c89adc350b755a194691 {
+    background-image:  url('images/slide21faf89206e84c89adc350b755a194691.jpg');
+        /* background-size:  auto auto; */
+        background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+/* special setup for header/pageslider */
+.responsive .art-header .art-slide21faf89206e84c89adc350b755a194691 {
+    background-image:  url('images/slide21faf89206e84c89adc350b755a194691.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.responsive .art-pageslider .art-slide21faf89206e84c89adc350b755a194691 {
+    background-image:  url('images/slide21faf89206e84c89adc350b755a194691.jpg');
+    background-size: auto auto;
+    background-position:  center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-header .art-slide21faf89206e84c89adc350b755a194691 {
+    background-image: url('images/slide21faf89206e84c89adc350b755a194691.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.default-responsive .art-pageslider .art-slide21faf89206e84c89adc350b755a194691 {
+    background-image: url('images/slide21faf89206e84c89adc350b755a194691.jpg');
+    background-size: auto auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.art-slidenavigator21faf89206e84c89adc350b755a19469 {
+  display: inline-block;
+  position: absolute;
+  direction: ltr !important;
+  top: 212px;
+  left: 89%;
+  z-index: 101;
+  line-height: 0 !important;
+  -webkit-background-origin: border !important;
+  -moz-background-origin: border !important;
+  background-origin: border-box !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+    white-space: nowrap;
+    }
+.art-slidenavigator21faf89206e84c89adc350b755a19469
+{
+background: #CCBD9E;background: -webkit-linear-gradient(top, rgba(232, 226, 212, 0.6) 0, rgba(176, 153, 105, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(232, 226, 212, 0.6) 0, rgba(176, 153, 105, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(232, 226, 212, 0.6) 0, rgba(176, 153, 105, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(232, 226, 212, 0.6) 0, rgba(176, 153, 105, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(232, 226, 212, 0.6) 0, rgba(176, 153, 105, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(232, 226, 212, 0.6) 0, rgba(176, 153, 105, 0.6) 100%) no-repeat;
+-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
+
+
+padding:7px;
+
+
+
+
+
+}
+.art-slidenavigator21faf89206e84c89adc350b755a19469 > a
+{
+background: #826F45;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigator21faf89206e84c89adc350b755a19469 > a.active
+{
+background: #EC7F32;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
+.art-slidenavigator21faf89206e84c89adc350b755a19469 > a:hover
+{
+background: #827164;
+-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
+
+
+
+margin:0 10px 0 0;
+
+width: 10px;
+
+height: 10px;
+}
 
 </style></head>
 <body>
@@ -57,8 +315,28 @@
     <div class="art-content-layout-row">
     <div class="art-layout-cell layout-item-1" style="width: 100%" >
         <h3>Welcome</h3>
-        <img style="float: left; margin-top: 7px; margin-right: 7px; margin-bottom: 7px; margin-left: 7px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(195, 185, 177); border-right-color: rgb(195, 185, 177); border-bottom-color: rgb(195, 185, 177); border-left-color: rgb(195, 185, 177); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;" width="400" height="236" alt="" class="art-lightbox" src="images/2e17433f-4102-41d6-816d-46092846b9bb.png">
-        
+<div id="21faf89206e84c89adc350b755a19469" style="position: relative; display: inline-block; z-index: 0; margin: 7px;  border-style: solid; border-color: #C3B9B1; border-width: 2px;  float: left;" class="art-collage">
+<div class="art-slider art-slidecontainer21faf89206e84c89adc350b755a19469" data-width="400" data-height="236">
+    <div class="art-slider-inner">
+<div class="art-slide-item art-slide21faf89206e84c89adc350b755a194690" >
+
+
+</div>
+<div class="art-slide-item art-slide21faf89206e84c89adc350b755a194691" >
+
+
+</div>
+
+    </div>
+</div>
+<div class="art-slidenavigator art-slidenavigator21faf89206e84c89adc350b755a19469" data-left="1" data-top="1">
+<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
+</div>
+
+
+
+    </div>
+
          
          
         <p><span style="font-weight: bold;">Nam velit lectus, iaculis ac consequat eu, blandit id urna. Nullam interdum mollis mi, quis bibendum leo consectetur et. Etiam purus velit, feugiat vitae luctus convallis, luctus ac odio.</span></p>
