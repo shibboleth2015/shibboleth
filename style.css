@@ -1,4 +1,4 @@
-/* Created by Artisteer v4.3.0.60745 */
+/* Created by Artisteer v4.1.0.60046 */
 
 #art-main
 {
@@ -40,17 +40,18 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
    -webkit-background-origin: border !important;
    -moz-background-origin: border !important;
    background-origin: border-box !important;
-   background: #EC7F32;
-   background: -webkit-linear-gradient(top, rgba(242, 171, 120, 0.8) 0, rgba(233, 110, 22, 0.8) 70%, rgba(191, 90, 18, 0.8) 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(242, 171, 120, 0.8) 0, rgba(233, 110, 22, 0.8) 70%, rgba(191, 90, 18, 0.8) 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(242, 171, 120, 0.8) 0, rgba(233, 110, 22, 0.8) 70%, rgba(191, 90, 18, 0.8) 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(242, 171, 120, 0.8) 0, rgba(233, 110, 22, 0.8) 70%, rgba(191, 90, 18, 0.8) 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(242, 171, 120, 0.8) 0, rgba(233, 110, 22, 0.8) 70%, rgba(191, 90, 18, 0.8) 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(242, 171, 120, 0.8) 0, rgba(233, 110, 22, 0.8) 70%, rgba(191, 90, 18, 0.8) 100%) no-repeat;
+   background: #453931;
+   background: linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   background: linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
-   border:3px solid rgba(168, 79, 16, 0.8);
+   border:3px solid rgba(69, 57, 49, 0.8);
    padding:0 15px;
    margin:0 auto;
    height:29px;
@@ -108,26 +109,26 @@ ul.art-vmenu a
    font-weight: bold;
    font-style: normal;
    text-decoration: none;
-   color: #A78E58;
+   color: #2A93D5;
 }
 
 .art-postcontent a:visited, .art-postcontent a.visited
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
-   color: #907D6F;
+   color: #958F6A;
 }
 
 .art-postcontent  a:hover, .art-postcontent a.hover
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
-   color: #79390B;
+   color: #59ABDE;
 }
 
 .art-postcontent h1
 {
-   color: #A78E58;
+   color: #2A93D5;
    margin: 10px 0 0;
    font-size: 26px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -148,7 +149,7 @@ ul.art-vmenu a
 
 .art-postcontent h2
 {
-   color: #907D6F;
+   color: #957B6A;
    margin: 10px 0 0;
    font-size: 36px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -169,7 +170,7 @@ ul.art-vmenu a
 
 .art-postcontent h3
 {
-   color: #907D6F;
+   color: #957B6A;
    margin: 10px 0 0;
    font-size: 26px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -190,7 +191,7 @@ ul.art-vmenu a
 
 .art-postcontent h4
 {
-   color: #76675B;
+   color: #302E22;
    margin: 10px 0 0;
    font-size: 16px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -211,7 +212,7 @@ ul.art-vmenu a
 
 .art-postcontent h5
 {
-   color: #76675B;
+   color: #302E22;
    margin: 10px 0 0;
    font-size: 14px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -232,7 +233,7 @@ ul.art-vmenu a
 
 .art-postcontent h6
 {
-   color: #C1B6AE;
+   color: #716D50;
    margin: 10px 0 0;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -281,52 +282,22 @@ html, body
    height: 100%;
 }
 
-/**
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- * https://github.com/necolas/normalize.css
- */
-
-html {
-   -ms-text-size-adjust: 100%;
-   /* 2 */
-    -webkit-text-size-adjust: 100%;
-/* 2 */}
-
 body
 {
    padding: 0;
    margin:0;
    min-width: 1000px;
-   color: #483F37;
+   color: #302E22;
 }
 
-.art-header:before, 
-#art-header-bg:before, 
-.art-layout-cell:before, 
-.art-layout-wrapper:before, 
-.art-footer:before, 
-.art-nav:before, 
-#art-hmenu-bg:before, 
-.art-sheet:before 
+.art-header:before, #art-header-bg:before, .art-layout-cell:before, .art-layout-wrapper:before, .art-footer:before, .art-nav:before, #art-hmenu-bg:before, .art-sheet:before
 {
    width: 100%;
    content: " ";
    display: table;
-   border-collapse: collapse;
-   border-spacing: 0;
 }
-
-.art-header:after, 
-#art-header-bg:after, 
-.art-layout-cell:after, 
-.art-layout-wrapper:after, 
-.art-footer:after, 
-.art-nav:after, 
-#art-hmenu-bg:after, 
-.art-sheet:after,
-.cleared, .clearfix:after 
-{
+.art-header:after, #art-header-bg:after, .art-layout-cell:after, .art-layout-wrapper:after, .art-footer:after, .art-nav:after, #art-hmenu-bg:after, .art-sheet:after,
+.cleared, .clearfix:after {
    clear: both;
    font: 0/0 serif;
    display: block;
@@ -410,10 +381,10 @@ li p, .art-postcontent li p, .art-blockcontent li p
   display: inline-block;
   position: absolute;
   min-width: 50px;
-  top: 30px;
-  left: 91.01%;
-  margin-left: -222px !important;
+  top: 4px;
+  left: 83.9%;
   line-height: 100%;
+  margin-left: -254px !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -433,10 +404,10 @@ font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 font-weight: bold;
 font-style: normal;
 text-decoration: none;
-text-shadow: 1.4px 1.4px 0px rgba(23, 23, 23, 0.82);
+text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #FFFFFF !important;
+  color: #483B33 !important;
   white-space: nowrap;
 }
 .art-slogan
@@ -444,10 +415,10 @@ text-shadow: 1.4px 1.4px 0px rgba(23, 23, 23, 0.82);
   display: inline-block;
   position: absolute;
   min-width: 50px;
-  top: 85px;
-  left: 99.28%;
+  top: 88px;
+  left: 83.9%;
   line-height: 100%;
-  margin-left: -303px !important;
+  margin-left: -318px !important;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -468,12 +439,11 @@ font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 font-weight: bold;
 font-style: normal;
 text-decoration: none;
-text-shadow: 1.4px 1.4px 0px rgba(23, 23, 23, 0.82);
+text-shadow: 0px 0px 12px rgb(255, 255, 255);
   padding: 0;
   margin: 0;
-  color: #F08D47 !important;
+  color: #000000 !important;
 }
-
 
 
 
@@ -486,25 +456,17 @@ text-shadow: 1.4px 1.4px 0px rgba(23, 23, 23, 0.82);
 .art-header
 {
    margin:0 auto;
-   background-repeat: no-repeat;
-   height: 500px;
    position:relative;
+   height: 500px;
    background-image: url('images/header.jpg');
    background-position: center top;
+   background-repeat: no-repeat;
 }
 
-.custom-responsive .art-header
-{
-   background-image: url('images/header.jpg');
-   background-position: center top;
-}
-
-.default-responsive .art-header,
-.default-responsive #art-header-bg
+.responsive .art-header 
 {
    background-image: url('images/header.jpg');
    background-position: center center;
-   background-size: cover;
 }
 
 .art-header-inner{
@@ -522,14 +484,15 @@ text-shadow: 1.4px 1.4px 0px rgba(23, 23, 23, 0.82);
 
 .art-nav
 {
-   background: #4E443C url('images/nav.png') scroll;
-   background: -webkit-linear-gradient(top, rgba(146, 128, 114, 0.1) 0, rgba(9, 8, 7, 0.06) 100%) no-repeat, url('images/nav.png'), -webkit-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(146, 128, 114, 0.1) 0, rgba(9, 8, 7, 0.06) 100%) no-repeat, url('images/nav.png'), -moz-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(146, 128, 114, 0.1) 0, rgba(9, 8, 7, 0.06) 100%) no-repeat, url('images/nav.png'), -o-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(146, 128, 114, 0.1) 0, rgba(9, 8, 7, 0.06) 100%) no-repeat, url('images/nav.png'), -ms-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(146, 128, 114, 0.1) 0, rgba(9, 8, 7, 0.06) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(146, 128, 114, 0.1) 0, rgba(9, 8, 7, 0.06) 100%) no-repeat, url('images/nav.png'), linear-gradient(to bottom, #7C6C5F 0, #201C18 100%) no-repeat;
-   border-bottom:2px solid #C3B9B1;
+   background: #453931 url('images/nav.png') scroll;
+   background: linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -webkit-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -moz-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -o-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -ms-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   border-bottom:2px solid #3B9CD8;
    padding:12px 6px 0;
    margin:0 auto;
    position: relative;
@@ -656,13 +619,14 @@ ul.art-hmenu>li:last-child, ul.art-hmenu>li.last-child {
 
 ul.art-hmenu>li>a
 {
-   background: #CCBD9E;
-   background: -webkit-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: -moz-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: -o-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: -ms-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   -svg-background: linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: linear-gradient(to bottom, #E8E2D4 0, #B09969 100%) no-repeat;
+   background: #746053 url('images/menuitem.png') scroll;
+   background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -webkit-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -moz-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -o-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -ms-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -673,7 +637,7 @@ ul.art-hmenu>li>a
    height: 48px;
    cursor: pointer;
    text-decoration: none;
-   color: #2B2517;
+   color: #FFFFFF;
    line-height: 48px;
    text-align: center;
 }
@@ -694,19 +658,20 @@ ul.art-hmenu>li>a
 
 ul.art-hmenu>li>a.active
 {
-   background: #EC7F32;
-   background: -webkit-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -moz-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -o-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -ms-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   -svg-background: linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: linear-gradient(to bottom, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
+   background: #59ABDE url('images/menuactiveitem.png') scroll;
+   background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -webkit-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -moz-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -o-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -ms-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
    padding:0 32px;
    margin:0 auto;
-   color: #2E2823;
+   color: #FFFFFF;
    padding-bottom: 2px;
    margin-bottom: -2px;
    text-decoration: none;
@@ -720,13 +685,14 @@ ul.art-hmenu>li:hover>a {
 
 ul.art-hmenu>li>a:hover, .desktop ul.art-hmenu>li:hover>a
 {
-   background: #EC7F32;
-   background: -webkit-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -moz-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -o-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -ms-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   -svg-background: linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: linear-gradient(to bottom, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
+   background: #2A93D5 url('images/menuhovereditem.png') scroll;
+   background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -webkit-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -moz-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -o-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -ms-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -735,7 +701,7 @@ ul.art-hmenu>li>a:hover, .desktop ul.art-hmenu>li:hover>a
 }
 ul.art-hmenu>li>a:hover, 
 .desktop ul.art-hmenu>li:hover>a {
-   color: #2E2823;
+   color: #000000;
    text-decoration: none;
 }
 ul.art-hmenu>li>a.active:hover {
@@ -745,8 +711,8 @@ ul.art-hmenu>li>a.active:hover {
 
 ul.art-hmenu li li a
 {
-   background: #D7D0CB;
-   border:1px solid #AFA297;
+   background: #A08879;
+   border:1px solid #746053;
    padding:0 22px;
    margin:0 auto;
 }
@@ -777,7 +743,7 @@ ul.art-hmenu li li ul>li:last-child
    border: 1px solid transparent;
    text-align: left;
    line-height: 24px;
-   color: #312B26;
+   color: #081D2B;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
@@ -804,7 +770,7 @@ ul.art-hmenu li li ul>li:last-child
 {
    text-align: left;
    line-height: 24px;
-   color: #312B26;
+   color: #081D2B;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
@@ -813,13 +779,13 @@ ul.art-hmenu li li ul>li:last-child
 
 ul.art-hmenu ul li a:hover, .desktop ul.art-hmenu ul li:hover>a
 {
-   background: #AFA297;
-   border:1px solid #AFA297;
+   background: #59ABDE;
+   border:1px solid #746053;
    margin:0 auto;
 }
 .art-hmenu ul a:hover
 {
-   color: #2E2823;
+   color: #000000;
 }
 
 .art-hmenu ul li a.art-hmenu-before-hovered 
@@ -829,12 +795,12 @@ ul.art-hmenu ul li a:hover, .desktop ul.art-hmenu ul li:hover>a
 
 .desktop .art-hmenu ul li:hover>a
 {
-   color: #2E2823;
+   color: #000000;
 }
 
 ul.art-hmenu ul:before
 {
-   background: #9B8A7D;
+   background: #A6A182;
    margin:0 auto;
    display: block;
    position: absolute;
@@ -984,9 +950,6 @@ ul.art-hmenu ul
 
 .art-layout-cell
 {
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
    display: table-cell;
    vertical-align: top;
 }
@@ -1018,7 +981,7 @@ div.art-block img
 .art-blockheader .t a:visited, 
 .art-blockheader .t a:hover
 {
-   color: #000000;
+   color: #625146;
    font-size: 22px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    margin: 0 10px;
@@ -1028,7 +991,7 @@ div.art-block img
 {
    padding:5px;
    margin:0 auto;
-   color: #483F37;
+   color: #302E22;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
@@ -1039,7 +1002,7 @@ div.art-block img
 .art-blockcontent a:visited,
 .art-blockcontent a:hover
 {
-   color: #483F37;
+   color: #302E22;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
@@ -1051,7 +1014,7 @@ div.art-block img
 
 .art-blockcontent a, .art-blockcontent a:link
 {
-   color: #A78E58;
+   color: #2A93D5;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: bold;
    font-style: normal;
@@ -1060,7 +1023,7 @@ div.art-block img
 
 .art-blockcontent a:visited, .art-blockcontent a.visited
 {
-   color: #C1B6AE;
+   color: #C4C1AB;
    font-weight: bold;
    font-style: normal;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -1069,7 +1032,7 @@ div.art-block img
 
 .art-blockcontent a:hover, .art-blockcontent a.hover
 {
-   color: #EE8E49;
+   color: #59ABDE;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
@@ -1096,7 +1059,7 @@ div.art-block img
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 125%;
-   color: #5F5349;
+   color: #4B4835;
    margin: 5px 0 0 10px;
 }
 
@@ -1134,7 +1097,7 @@ button.art-button
    vertical-align: middle;
    white-space: nowrap;
    text-align: center;
-   color: #000000;
+   color: #FFFFFF;
    margin: 0 5px 0 0 !important;
    overflow: visible;
    cursor: pointer;
@@ -1174,60 +1137,61 @@ input, select, textarea, a.art-search-button span
 input.art-button
 {
    float: none !important;
-   -webkit-appearance: none;
 }
 
 .art-button.active, .art-button.active:hover
 {
-   background: #EC7F32;
-   background: -webkit-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -moz-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -o-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: -ms-linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   -svg-background: linear-gradient(top, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
-   background: linear-gradient(to bottom, #F2AB78 0, #E96E16 70%, #BF5A12 100%) no-repeat;
+   background: #453931;
+   background: linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -moz-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -o-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: -ms-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   -svg-background: linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
-   border:3px solid #79390B;
+   border:3px solid #453931;
    padding:0 15px;
    margin:0 auto;
 }
 .art-button.active, .art-button.active:hover {
-   color: #331805 !important;
+   color: #DBD2CC !important;
 }
 
 .art-button.hover, .art-button:hover
 {
-   background: #F09C60;
-   background: -webkit-linear-gradient(top, rgba(247, 200, 166, 0.92) 0, rgba(233, 110, 22, 0.92) 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(247, 200, 166, 0.92) 0, rgba(233, 110, 22, 0.92) 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(247, 200, 166, 0.92) 0, rgba(233, 110, 22, 0.92) 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(247, 200, 166, 0.92) 0, rgba(233, 110, 22, 0.92) 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(247, 200, 166, 0.92) 0, rgba(233, 110, 22, 0.92) 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(247, 200, 166, 0.92) 0, rgba(233, 110, 22, 0.92) 100%) no-repeat;
+   background: #453931;
+   background: linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   background: -webkit-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   background: -moz-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   background: -o-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   background: -ms-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   background: linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   -svg-background: linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
-   border:3px solid rgba(121, 57, 11, 0.92);
+   border:3px solid rgba(69, 57, 49, 0.92);
    padding:0 15px;
    margin:0 auto;
 }
 .art-button.hover, .art-button:hover {
-   color: #000000 !important;
+   color: #FFFFFF !important;
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="range"], input[type="tel"], input[type="time"], input[type="week"], textarea
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
 {
-   background: #FFFFFF;
-   border:1px solid rgba(175, 162, 151, 0.2);
+   background: #F9FAFB;
+   border:1px solid rgba(140, 116, 99, 0.2);
    margin:0 auto;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="range"], input[type="tel"], input[type="time"], input[type="week"], textarea
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
 {
    width: auto;
    padding: 8px 0;
-   color: #483F37 !important;
+   color: #483B33 !important;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
@@ -1236,12 +1200,12 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 }
 input.art-error, textarea.art-error
 {
-   background: #FFFFFF;
+   background: #F9FAFB;
    border:1px solid #E2341D;
    margin:0 auto;
 }
 input.art-error, textarea.art-error {
-   color: #483F37 !important;
+   color: #483B33 !important;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
@@ -1249,16 +1213,16 @@ input.art-error, textarea.art-error {
 }
 form.art-search input[type="text"]
 {
-   background: #FFFFFF;
+   background: #F9FAFB;
    border-radius: 0;
-   border:1px solid #AFA297;
+   border:1px solid #CCD6E0;
    margin:0 auto;
    width: 100%;
    padding: 0 0;
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
-   color: #483F37 !important;
+   color: #483B33 !important;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
@@ -1279,7 +1243,6 @@ form.art-search
 
 form.art-search input, a.art-search-button
 {
-   -webkit-appearance: none;
    top:0;
    right:0;
 }
@@ -1292,8 +1255,10 @@ form.art-search>input, a.art-search-button{
 
 form.art-search input[type="submit"], input.art-search-button, a.art-search-button
 {
-   background: #EC7F32;
-   border-radius: 0;
+   background: #CAC7B4;
+   -webkit-border-radius:0 -1px -1px 0;
+   -moz-border-radius:0 -1px -1px 0;
+   border-radius:0 -1px -1px 0;
    margin:0 auto;
 }
 form.art-search input[type="submit"], input.art-search-button, a.art-search-button {
@@ -1305,7 +1270,7 @@ form.art-search input[type="submit"], input.art-search-button, a.art-search-butt
    bottom: 1px;
    right: 	1px;
    padding:0 6px;
-   color: #000000 !important;
+   color: #625F46 !important;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
@@ -1334,14 +1299,9 @@ a.art-search-button:hover, a.art-search-button.hover
    font-style: normal;
 }
 
-a.art-search-button 
-{
-   line-height: 100% !important;
-}
-
 label.art-checkbox:before
 {
-   background: #FFFFFF;
+   background: #F9FAFB;
    -webkit-border-radius:1px;
    -moz-border-radius:1px;
    border-radius:1px;
@@ -1359,7 +1319,7 @@ label.art-checkbox
    font-style: normal;
    line-height: 16px;
    display: inline-block;
-   color: #483F37 !important;
+   color: #4B3E35 !important;
 }
 
 .art-checkbox>input[type="checkbox"]
@@ -1369,7 +1329,7 @@ label.art-checkbox
 
 label.art-checkbox.active:before
 {
-   background: #F6C29D;
+   background: #84C1E7;
    -webkit-border-radius:1px;
    -moz-border-radius:1px;
    border-radius:1px;
@@ -1382,7 +1342,7 @@ label.art-checkbox.active:before
 
 label.art-checkbox.hovered:before
 {
-   background: #F0D8C6;
+   background: #BFDFF2;
    -webkit-border-radius:1px;
    -moz-border-radius:1px;
    border-radius:1px;
@@ -1395,7 +1355,7 @@ label.art-checkbox.hovered:before
 
 label.art-radiobutton:before
 {
-   background: #FFFFFF;
+   background: #F9FAFB;
    -webkit-border-radius:3px;
    -moz-border-radius:3px;
    border-radius:3px;
@@ -1413,7 +1373,7 @@ label.art-radiobutton
    font-style: normal;
    line-height: 12px;
    display: inline-block;
-   color: #483F37 !important;
+   color: #4B3E35 !important;
 }
 
 .art-radiobutton>input[type="radio"]
@@ -1424,7 +1384,7 @@ label.art-radiobutton
 
 label.art-radiobutton.active:before
 {
-   background: #F6C29D;
+   background: #84C1E7;
    -webkit-border-radius:3px;
    -moz-border-radius:3px;
    border-radius:3px;
@@ -1437,7 +1397,7 @@ label.art-radiobutton.active:before
 
 label.art-radiobutton.hovered:before
 {
-   background: #F0D8C6;
+   background: #BFDFF2;
    -webkit-border-radius:3px;
    -moz-border-radius:3px;
    border-radius:3px;
@@ -1450,19 +1410,19 @@ label.art-radiobutton.hovered:before
 
 .art-comments
 {
-   border-top:1px dotted #C3B9B1;
+   border-top:1px dotted #59ABDE;
    margin:0 auto;
    margin-top: 25px;
 }
 
 .art-comments h2
 {
-   color: #483F37;
+   color: #0D2F44;
 }
 
 .art-comment-inner
 {
-   background: #F1EDE4;
+   background: #E2E8EE;
    background: transparent;
    -webkit-border-radius:2px;
    -moz-border-radius:2px;
@@ -1478,7 +1438,7 @@ label.art-radiobutton.hovered:before
    height:80px;
    padding:1px;
    background:#fff;
-   border:1px solid #B9A579;
+   border:1px solid #E2E8EE;
 }
 
 .art-comment-avatar>img
@@ -1490,7 +1450,7 @@ label.art-radiobutton.hovered:before
 .art-comment-content
 {
    padding:10px 0;
-   color: #483F37;
+   color: #4B4835;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
@@ -1506,7 +1466,7 @@ label.art-radiobutton.hovered:before
 
 .art-comment-header
 {
-   color: #483F37;
+   color: #0D2F44;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 100%;
 }
@@ -1525,19 +1485,19 @@ label.art-radiobutton.hovered:before
 .art-comment-header a, .art-comment-header a:link
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #54472C;
+   color: #379AD7;
 }
 
 .art-comment-header a:visited, .art-comment-header a.visited
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #483F37;
+   color: #379AD7;
 }
 
 .art-comment-header a:hover,  .art-comment-header a.hovered
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #251203;
+   color: #379AD7;
 }
 
 .art-comment-content a, 
@@ -1553,34 +1513,35 @@ label.art-radiobutton.hovered:before
 .art-comment-content a, .art-comment-content a:link
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #54472C;
+   color: #7A6557;
 }
 
 .art-comment-content a:visited, .art-comment-content a.visited
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #483F37;
+   color: #625F46;
 }
 
 .art-comment-content a:hover,  .art-comment-content a.hovered
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #251203;
+   color: #7A6557;
 }
 
 .art-pager
 {
-   background: #EDE8DE;
-   background: -webkit-linear-gradient(top, #FFFFFF 0, #C3B28D 100%) no-repeat;
-   background: -moz-linear-gradient(top, #FFFFFF 0, #C3B28D 100%) no-repeat;
-   background: -o-linear-gradient(top, #FFFFFF 0, #C3B28D 100%) no-repeat;
-   background: -ms-linear-gradient(top, #FFFFFF 0, #C3B28D 100%) no-repeat;
-   -svg-background: linear-gradient(top, #FFFFFF 0, #C3B28D 100%) no-repeat;
-   background: linear-gradient(to bottom, #FFFFFF 0, #C3B28D 100%) no-repeat;
+   background: #EFF2F5;
+   background: linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   background: -moz-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   background: -o-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   background: -ms-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   background: linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   -svg-background: linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
    -webkit-border-radius:2px;
    -moz-border-radius:2px;
    border-radius:2px;
-   border:1px solid #CCBD9E;
+   border:1px solid #59ABDE;
    padding:5px;
 }
 
@@ -1595,17 +1556,18 @@ label.art-radiobutton.hovered:before
 
 .art-pager>*
 {
-   background: #E5DDCD;
-   background: -webkit-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: -moz-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: -o-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: -ms-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   -svg-background: linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: linear-gradient(to bottom, #FFFFFF 0, #C5B491 100%) no-repeat;
+   background: #BFDFF2;
+   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -moz-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -o-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -ms-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   -svg-background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    -webkit-border-radius:2px;
    -moz-border-radius:2px;
    border-radius:2px;
-   border:1px solid #B9A579;
+   border:1px solid #BFDFF2;
    padding:7px;
    margin:0 4px 0 auto;
    line-height: normal;
@@ -1621,61 +1583,64 @@ label.art-radiobutton.hovered:before
    line-height: normal;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
-   color: #381A05
+   color: #0A2333
 ;
 }
 
 .art-pager .active
 {
-   background: #CCBD9E;
-   background: -webkit-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: -moz-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: -o-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: -ms-linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   -svg-background: linear-gradient(top, #E8E2D4 0, #B09969 100%) no-repeat;
-   background: linear-gradient(to bottom, #E8E2D4 0, #B09969 100%) no-repeat;
-   border:1px solid #B9A579;
+   background: #B6BFC9;
+   background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   background: -moz-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   background: -o-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   background: -ms-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   -svg-background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   border:1px solid #BFDFF2;
    padding:7px;
    margin:0 4px 0 auto;
-   color: #2A1404
+   color: #FFFFFF
 ;
 }
 
 .art-pager .more
 {
-   background: #E5DDCD;
-   background: -webkit-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: -moz-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: -o-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: -ms-linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   -svg-background: linear-gradient(top, #FFFFFF 0, #C5B491 100%) no-repeat;
-   background: linear-gradient(to bottom, #FFFFFF 0, #C5B491 100%) no-repeat;
-   border:1px solid #B9A579;
+   background: #BFDFF2;
+   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -moz-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -o-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: -ms-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   -svg-background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   border:1px solid #BFDFF2;
    margin:0 4px 0 auto;
 }
 .art-pager a.more:link,
 .art-pager a.more:visited
 {
-   color: #381A05
+   color: #241E19
 ;
 }
 .art-pager a:hover
 {
-   background: #F09C60;
-   background: -webkit-linear-gradient(top, #F7C8A6 0, #E96E16 100%) no-repeat;
-   background: -moz-linear-gradient(top, #F7C8A6 0, #E96E16 100%) no-repeat;
-   background: -o-linear-gradient(top, #F7C8A6 0, #E96E16 100%) no-repeat;
-   background: -ms-linear-gradient(top, #F7C8A6 0, #E96E16 100%) no-repeat;
-   -svg-background: linear-gradient(top, #F7C8A6 0, #E96E16 100%) no-repeat;
-   background: linear-gradient(to bottom, #F7C8A6 0, #E96E16 100%) no-repeat;
-   border:1px solid #B9A579;
+   background: #84C1E7;
+   background: linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   background: -webkit-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   background: -moz-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   background: -o-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   background: -ms-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   background: linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   -svg-background: linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   border:1px solid #BFDFF2;
    padding:7px;
    margin:0 4px 0 auto;
 }
 .art-pager  a:hover,
 .art-pager  a.more:hover
 {
-   color: #210F03
+   color: #0B2637
 ;
 }
 .art-pager>*:after
@@ -1697,18 +1662,18 @@ label.art-radiobutton.hovered:before
 
 .art-commentsform
 {
-   background: #F1EDE4;
+   background: #E2E8EE;
    background: transparent;
    padding:10px;
    margin:0 auto;
    margin-top:25px;
-   color: #483F37;
+   color: #0D2F44;
 }
 
 .art-commentsform h2{
    padding-bottom:10px;
    margin: 0;
-   color: #483F37;
+   color: #0D2F44;
 }
 
 .art-commentsform label {
@@ -1763,7 +1728,7 @@ a img
 .art-article th, .art-article td
 {
    padding: 2px;
-   border: solid 1px #685A50;
+   border: solid 1px #7A7657;
    vertical-align: top;
    text-align: left;
 }
@@ -1821,7 +1786,7 @@ pre
 
 .art-postheader
 {
-   color: #75370B;
+   color: #625146;
    margin: 5px 0;
    font-size: 24px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -1843,7 +1808,7 @@ pre
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
-   color: #D26314;
+   color: #2685C0;
 }
 
 .art-postheader a:visited, .art-postheader a.visited
@@ -1851,7 +1816,7 @@ pre
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
-   color: #9B8A7D;
+   color: #86815F;
 }
 
 .art-postheader a:hover,  .art-postheader a.hovered
@@ -1859,7 +1824,7 @@ pre
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
-   color: #79390B;
+   color: #59ABDE;
 }
 
 .art-postheadericons,
@@ -1869,7 +1834,7 @@ pre
 .art-postheadericons a:hover
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #5F5349;
+   color: #625F46;
 }
 
 .art-postheadericons
@@ -1881,7 +1846,7 @@ pre
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
-   color: #A34D0F;
+   color: #1D6795;
 }
 
 .art-postheadericons a:visited, .art-postheadericons a.visited
@@ -1890,7 +1855,7 @@ pre
    font-weight: normal;
    font-style: italic;
    text-decoration: underline;
-   color: #75633E;
+   color: #1D6795;
 }
 
 .art-postheadericons a:hover, .art-postheadericons a.hover
@@ -1899,7 +1864,7 @@ pre
    font-weight: normal;
    font-style: italic;
    text-decoration: none;
-   color: #251F13;
+   color: #2788C4;
 }
 
 .art-postpdficon:before
@@ -1974,7 +1939,7 @@ pre
 {
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #1B170E;
+   color: #4B4835;
    margin: 5px 0 5px 11px;
 }
 
@@ -2023,10 +1988,10 @@ pre
 
 blockquote
 {
-   background: #E0DBD7 url('images/postquote.png') no-repeat scroll;
+   background: #E3E2D8 url('images/postquote.png') no-repeat scroll;
    padding:10px 10px 10px 38px;
    margin:10px 10px 10px 50px;
-   color: #37302A;
+   color: #12110D;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    /* makes block not to align behind the image if they are in the same line */
   overflow: auto;
@@ -2037,7 +2002,7 @@ blockquote a:link, .art-postcontent blockquote a:link, .art-blockcontent blockqu
 blockquote a:visited, .art-postcontent blockquote a:visited, .art-blockcontent blockquote a:visited, .art-footer blockquote a:visited,
 blockquote a:hover, .art-postcontent blockquote a:hover, .art-blockcontent blockquote a:hover, .art-footer blockquote a:hover
 {
-   color: #37302A;
+   color: #12110D;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
@@ -2058,7 +2023,7 @@ blockquote p,
 .art-postfootericons a:hover
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #5F5349;
+   color: #7A7657;
 }
 
 .art-postfootericons
@@ -2070,21 +2035,21 @@ blockquote p,
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
-   color: #A34D0F;
+   color: #1D6795;
 }
 
 .art-postfootericons a:visited, .art-postfootericons a.visited
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
-   color: #75633E;
+   color: #1D6795;
 }
 
 .art-postfootericons a:hover, .art-postfootericons a.hover
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
-   color: #251F13;
+   color: #2788C4;
 }
 
 .Navigator .art-ccs-navigator img, .Navigator img
@@ -2115,45 +2080,39 @@ tr.Navigator td, td span.Navigator
 {
    position:relative;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #9A8351;
+   color: #2788C4;
 }
 
 .Sorter a:link
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #9A8351;
+   color: #2788C4;
 }
 
 .Sorter a:visited, .Sorter a.visited
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #9A8351;
+   color: #2788C4;
 }
 
 .Sorter a:hover, .Sorter a.hover
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color: #75633E;
+   color: #1D6795;
 }
 
 .Sorter
 {
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
-   color:#54472C;
+   color:#154A6A;
 }
 
 .art-footer
 {
-   background: #4E443C url('images/footer.png') scroll;
-   background: -webkit-linear-gradient(top, rgba(146, 128, 114, 0.16) 0, rgba(9, 8, 7, 0.1) 100%) no-repeat, url('images/footer.png'), -webkit-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: -moz-linear-gradient(top, rgba(146, 128, 114, 0.16) 0, rgba(9, 8, 7, 0.1) 100%) no-repeat, url('images/footer.png'), -moz-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: -o-linear-gradient(top, rgba(146, 128, 114, 0.16) 0, rgba(9, 8, 7, 0.1) 100%) no-repeat, url('images/footer.png'), -o-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: -ms-linear-gradient(top, rgba(146, 128, 114, 0.16) 0, rgba(9, 8, 7, 0.1) 100%) no-repeat, url('images/footer.png'), -ms-linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   -svg-background: linear-gradient(top, rgba(146, 128, 114, 0.16) 0, rgba(9, 8, 7, 0.1) 100%) no-repeat, url('images/footer.png'), linear-gradient(top, #7C6C5F 0, #201C18 100%) no-repeat;
-   background: linear-gradient(to bottom, rgba(146, 128, 114, 0.16) 0, rgba(9, 8, 7, 0.1) 100%) no-repeat, url('images/footer.png'), linear-gradient(to bottom, #7C6C5F 0, #201C18 100%) no-repeat;
+   background: #453931;
    margin:0 auto;
    position: relative;
-   color: #DCD2BC;
+   color: #FFFFFF;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-align: left;
    padding: 0;
@@ -2167,7 +2126,7 @@ tr.Navigator td, td span.Navigator
 .art-footer th,
 .art-footer caption
 {
-   color: #DCD2BC;
+   color: #FFFFFF;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
@@ -2181,58 +2140,58 @@ tr.Navigator td, td span.Navigator
 .art-footer a,
 .art-footer a:link
 {
-   color: #EA741F;
+   color: #927968;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
 
 .art-footer a:visited
 {
-   color: #958275;
+   color: #A8A385;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
 
 .art-footer a:hover
 {
-   color: #EE8E49;
+   color: #2990D1;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
 }
 
 .art-footer h1
 {
-   color: #A78E58;
+   color: #2A93D5;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h2
 {
-   color: #9B8A7D;
+   color: #59ABDE;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h3
 {
-   color: #9B8A7D;
+   color: #8C7463;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h4
 {
-   color: #C3B9B1;
+   color: #CAC7B4;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h5
 {
-   color: #C3B9B1;
+   color: #CAC7B4;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h6
 {
-   color: #C3B9B1;
+   color: #CAC7B4;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
@@ -2260,7 +2219,6 @@ tr.Navigator td, td span.Navigator
    display: inline-block;
    text-indent: 32px;
    background-position: left center;
-   vertical-align: middle;
 }
 
 .art-rss-tag-icon:empty
@@ -2277,7 +2235,6 @@ tr.Navigator td, td span.Navigator
    display: inline-block;
    text-indent: 35px;
    background-position: left center;
-   vertical-align: middle;
 }
 
 .art-facebook-tag-icon:empty
@@ -2294,95 +2251,9 @@ tr.Navigator td, td span.Navigator
    display: inline-block;
    text-indent: 35px;
    background-position: left center;
-   vertical-align: middle;
 }
 
 .art-twitter-tag-icon:empty
-{
-   vertical-align: middle;
-}
-
-.art-tumblr-tag-icon
-{
-   background:  url('images/tumblricon.png') no-repeat scroll;
-   margin:0 auto;
-   min-height:32px;
-   min-width:32px;
-   display: inline-block;
-   text-indent: 35px;
-   background-position: left center;
-   vertical-align: middle;
-}
-
-.art-tumblr-tag-icon:empty
-{
-   vertical-align: middle;
-}
-
-.art-pinterest-tag-icon
-{
-   background:  url('images/pinteresticon.png') no-repeat scroll;
-   margin:0 auto;
-   min-height:32px;
-   min-width:32px;
-   display: inline-block;
-   text-indent: 35px;
-   background-position: left center;
-   vertical-align: middle;
-}
-
-.art-pinterest-tag-icon:empty
-{
-   vertical-align: middle;
-}
-
-.art-vimeo-tag-icon
-{
-   background:  url('images/vimeoicon.png') no-repeat scroll;
-   margin:0 auto;
-   min-height:33px;
-   min-width:32px;
-   display: inline-block;
-   text-indent: 35px;
-   background-position: left center;
-   vertical-align: middle;
-}
-
-.art-vimeo-tag-icon:empty
-{
-   vertical-align: middle;
-}
-
-.art-youtube-tag-icon
-{
-   background:  url('images/youtubeicon.png') no-repeat scroll;
-   margin:0 auto;
-   min-height:32px;
-   min-width:32px;
-   display: inline-block;
-   text-indent: 35px;
-   background-position: left center;
-   vertical-align: middle;
-}
-
-.art-youtube-tag-icon:empty
-{
-   vertical-align: middle;
-}
-
-.art-linkedin-tag-icon
-{
-   background:  url('images/linkedinicon.png') no-repeat scroll;
-   margin:0 auto;
-   min-height:32px;
-   min-width:32px;
-   display: inline-block;
-   text-indent: 35px;
-   background-position: left center;
-   vertical-align: middle;
-}
-
-.art-linkedin-tag-icon:empty
 {
    vertical-align: middle;
 }
@@ -2410,7 +2281,7 @@ tr.Navigator td, td span.Navigator
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 125%;
-   color: #E9E5E2;
+   color: #DBD9CC;
 }
 
 .art-footer ul>li, .art-footer ol
@@ -2436,7 +2307,7 @@ tr.Navigator td, td span.Navigator
    font-style: normal;
    font-weight: normal;
    text-decoration: underline;
-   color: #D5C9AF;
+   color: #A48E7F;
 }
 
 .art-page-footer
@@ -2446,7 +2317,7 @@ tr.Navigator td, td span.Navigator
    padding: 1em;
    text-align: center !important;
    text-decoration: none;
-   color: #CAC1BA;
+   color: #C8C5B1;
 }
 
 .art-lightbox-wrapper 

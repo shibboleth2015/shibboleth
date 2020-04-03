@@ -1,4 +1,4 @@
-/* Created by Artisteer v4.3.0.60745 */
+/* Created by Artisteer v4.1.0.60046 */
 
 .art-header, #art-header-bg, .art-layout-cell, .art-layout-wrapper, .art-footer, .art-nav, #art-hmenu-bg, .art-sheet,
 .clearfix {
@@ -43,7 +43,7 @@ ul.art-hmenu>li:first-child {
 }
 
 ul.art-hmenu ul{
-   background-color: #9B8A7D !important;
+   background-color: #A6A182 !important;
 }
 
 .art-content-layout, .art-content-layout-row, .art-layout-cell 
@@ -85,10 +85,6 @@ form.art-search div>input[type="text"]
    margin :0;
 }
 
-form.art-search
-{
-   zoom: 1;
-}
 .art-postheadericons span{
    zoom: 1;
 }
