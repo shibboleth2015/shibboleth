@@ -1,4 +1,4 @@
-/* Created by Artisteer v4.3.0.60858 */
+/* Created by Artisteer v4.3.0.60745 */
 
 #art-main
 {
@@ -301,6 +301,22 @@ body
    color: #302E22;
 }
 
+.art-header:before, 
+#art-header-bg:before, 
+.art-layout-cell:before, 
+.art-layout-wrapper:before, 
+.art-footer:before, 
+.art-nav:before, 
+#art-hmenu-bg:before, 
+.art-sheet:before 
+{
+   width: 100%;
+   content: " ";
+   display: table;
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
 .art-header:after, 
 #art-header-bg:after, 
 .art-layout-cell:after, 
@@ -309,12 +325,12 @@ body
 .art-nav:after, 
 #art-hmenu-bg:after, 
 .art-sheet:after,
-.cleared, 
-.clearfix:after 
+.cleared, .clearfix:after 
 {
    clear: both;
-   display: table;
-   content: '';
+   font: 0/0 serif;
+   display: block;
+   content: " ";
 }
 
 form
@@ -617,6 +633,11 @@ ul.art-hmenu
    width: auto;
    height: auto;
    background-position: center;
+}
+
+.art-hmenu
+{
+   float: right;
 }
 
 .art-menuitemcontainer
@@ -2123,7 +2144,7 @@ tr.Navigator td, td span.Navigator
 
 .art-footer
 {
-   background: #453931;
+   background: #453931 url('images/footer.png') scroll;
    margin:0 auto;
    position: relative;
    color: #FFFFFF;
@@ -2313,10 +2334,10 @@ tr.Navigator td, td span.Navigator
 {
    background:  url('images/vimeoicon.png') no-repeat scroll;
    margin:0 auto;
-   min-height:50px;
-   min-width:48px;
+   min-height:33px;
+   min-width:32px;
    display: inline-block;
-   text-indent: 51px;
+   text-indent: 35px;
    background-position: left center;
    vertical-align: middle;
 }
