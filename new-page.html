@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.3.0.60858 -->
+<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.3.0.60745 -->
     <meta charset="utf-8">
     <title>Page 1</title>
     <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
@@ -15,268 +15,10 @@
     <script src="script.responsive.js"></script>
 
 
-<script>jQuery(function ($) {
-    'use strict';
-    if ($.fn.themeSlider) {
-        $(".art-slidecontainereb3151a12cdd4c029cb03823cb435590").each(function () {
-            var slideContainer = $(this), tmp;
-            var inner = $(".art-slider-inner", slideContainer);
-            inner.children().filter("script").remove();
-            var helper = null;
-            
-            if ($.support.themeTransition) {
-                helper = new BackgroundHelper();
-                helper.init("fade", "next", $(".art-slide-item", inner).first().css($.support.themeTransition.prefix + "transition-duration"));
-                inner.children().each(function () {
-                    helper.processSlide($(this));
-                });
-
-                
-            } else if (browser.ie && browser.version <= 8) {
-                var slidesInfo = {
-".art-slideeb3151a12cdd4c029cb03823cb4355900": {
-    "bgimage" : "url('images/slideeb3151a12cdd4c029cb03823cb4355900.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-},
-".art-slideeb3151a12cdd4c029cb03823cb4355901": {
-    "bgimage" : "url('images/slideeb3151a12cdd4c029cb03823cb4355901.jpg')",
-    "bgposition": "0 0",
-    "images": "",
-    "positions": ""
-}
-                };
-                $.each(slidesInfo, function(selector, info) {
-                    processElementMultiplyBg(slideContainer.find(selector), info);
-                });
-            }
-
-            inner.children().eq(0).addClass("active");
-            slideContainer.themeSlider({
-                pause: 2600,
-                speed: 600,
-                repeat: true,
-                animation: "fade",
-                direction: "next",
-                navigator: slideContainer.siblings(".art-slidenavigatoreb3151a12cdd4c029cb03823cb435590"),
-                helper: helper
-            });
-            
-                        
-        });
-    }
-});
-</script><style>.art-content .art-postcontent-0 .layout-item-0 { border-top-width:2px;border-top-style:solid;border-top-color:#B7A59A;margin-top: 10px;margin-bottom: 10px;  }
+<style>.art-content .art-postcontent-0 .layout-item-0 { border-top-width:2px;border-top-style:solid;border-top-color:#B7A59A;margin-top: 10px;margin-bottom: 10px;  }
 .art-content .art-postcontent-0 .layout-item-1 { padding-right: 10px;padding-left: 10px;  }
 .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
 .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 {
-    position: relative;
-        width: 400px;
-    height: 236px;
-        }
-
-.default-responsive .art-header .art-slidecontainereb3151a12cdd4c029cb03823cb435590,
-.responsive .art-header .art-slidecontainereb3151a12cdd4c029cb03823cb435590
-{
-  position: absolute !important;
-}
-
-.responsive .art-pageslider .art-slidecontainereb3151a12cdd4c029cb03823cb435590 {
-  position: absolute !important;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .art-slide-item
-{
-
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
-}
-
-
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .art-slide-item {
-    -webkit-transition: 600ms ease-in-out opacity;
-    -moz-transition: 600ms ease-in-out opacity;
-    -ms-transition: 600ms ease-in-out opacity;
-    -o-transition: 600ms ease-in-out opacity;
-    transition: 600ms ease-in-out opacity;
-    position: absolute !important;
-    display: none;
-	left: 0;
-	top: 0;
-	opacity: 0;
-    width:  100%;
-    height: 100%;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .active, .art-slidecontainereb3151a12cdd4c029cb03823cb435590 .next, .art-slidecontainereb3151a12cdd4c029cb03823cb435590 .prev {
-    display: block;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .active {
-    opacity: 1;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .next, .art-slidecontainereb3151a12cdd4c029cb03823cb435590 .prev {
-    width: 100%;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .next.forward, .art-slidecontainereb3151a12cdd4c029cb03823cb435590 .prev.back {
-    opacity: 1;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .active.forward {
-    opacity: 0;
-}
-
-.art-slidecontainereb3151a12cdd4c029cb03823cb435590 .active.back {
-    opacity: 0;
-}
-
-
-.art-slideeb3151a12cdd4c029cb03823cb4355900 {
-    background-image:  url('images/slideeb3151a12cdd4c029cb03823cb4355900.jpg');
-        /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slideeb3151a12cdd4c029cb03823cb4355900 {
-    background-image:  url('images/slideeb3151a12cdd4c029cb03823cb4355900.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slideeb3151a12cdd4c029cb03823cb4355900 {
-    background-image:  url('images/slideeb3151a12cdd4c029cb03823cb4355900.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slideeb3151a12cdd4c029cb03823cb4355900 {
-    background-image: url('images/slideeb3151a12cdd4c029cb03823cb4355900.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slideeb3151a12cdd4c029cb03823cb4355900 {
-    background-image: url('images/slideeb3151a12cdd4c029cb03823cb4355900.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}.art-slideeb3151a12cdd4c029cb03823cb4355901 {
-    background-image:  url('images/slideeb3151a12cdd4c029cb03823cb4355901.jpg');
-        /* background-size:  auto auto; */
-        background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-/* special setup for header/pageslider */
-.responsive .art-header .art-slideeb3151a12cdd4c029cb03823cb4355901 {
-    background-image:  url('images/slideeb3151a12cdd4c029cb03823cb4355901.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.responsive .art-pageslider .art-slideeb3151a12cdd4c029cb03823cb4355901 {
-    background-image:  url('images/slideeb3151a12cdd4c029cb03823cb4355901.jpg');
-    background-size: auto auto;
-    background-position:  center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-header .art-slideeb3151a12cdd4c029cb03823cb4355901 {
-    background-image: url('images/slideeb3151a12cdd4c029cb03823cb4355901.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.default-responsive .art-pageslider .art-slideeb3151a12cdd4c029cb03823cb4355901 {
-    background-image: url('images/slideeb3151a12cdd4c029cb03823cb4355901.jpg');
-    background-size: auto auto;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.art-slidenavigatoreb3151a12cdd4c029cb03823cb435590 {
-  display: inline-block;
-  position: absolute;
-  direction: ltr !important;
-  top: 212px;
-  left: 89%;
-  z-index: 101;
-  line-height: 0 !important;
-  -webkit-background-origin: border !important;
-  -moz-background-origin: border !important;
-  background-origin: border-box !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-align: center;
-    white-space: nowrap;
-    }
-.art-slidenavigatoreb3151a12cdd4c029cb03823cb435590
-{
-background: #84C1E7;background: -webkit-linear-gradient(top, rgba(200, 227, 244, 0.6) 0, rgba(63, 158, 217, 0.6) 100%) no-repeat;background: -moz-linear-gradient(top, rgba(200, 227, 244, 0.6) 0, rgba(63, 158, 217, 0.6) 100%) no-repeat;background: -o-linear-gradient(top, rgba(200, 227, 244, 0.6) 0, rgba(63, 158, 217, 0.6) 100%) no-repeat;background: -ms-linear-gradient(top, rgba(200, 227, 244, 0.6) 0, rgba(63, 158, 217, 0.6) 100%) no-repeat;-svg-background: linear-gradient(top, rgba(200, 227, 244, 0.6) 0, rgba(63, 158, 217, 0.6) 100%) no-repeat;background: linear-gradient(to bottom, rgba(200, 227, 244, 0.6) 0, rgba(63, 158, 217, 0.6) 100%) no-repeat;
--webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;
-
-
-padding:7px;
-
-
-
-
-
-}
-.art-slidenavigatoreb3151a12cdd4c029cb03823cb435590 > a
-{
-background: #2276AA;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigatoreb3151a12cdd4c029cb03823cb435590 > a.active
-{
-background: #CAC7B4;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
-.art-slidenavigatoreb3151a12cdd4c029cb03823cb435590 > a:hover
-{
-background: #958F6A;
--webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
-
-
-
-margin:0 10px 0 0;
-
-width: 10px;
-
-height: 10px;
-}
 
 </style></head>
 <body>
@@ -315,28 +57,8 @@ height: 10px;
     <div class="art-content-layout-row">
     <div class="art-layout-cell layout-item-1" style="width: 100%" >
         <h3>Welcome</h3>
-        <p></p><div id="eb3151a12cdd4c029cb03823cb435590" style="position: relative; display: inline-block; z-index: 0; margin: 7px;  border-style: solid; border-color: #CAC7B4; border-width: 2px;  float: left;" class="art-collage">
-<div class="art-slider art-slidecontainereb3151a12cdd4c029cb03823cb435590" data-width="400" data-height="236">
-    <div class="art-slider-inner">
-<div class="art-slide-item art-slideeb3151a12cdd4c029cb03823cb4355900" >
-
-
-</div>
-<div class="art-slide-item art-slideeb3151a12cdd4c029cb03823cb4355901" >
-
-
-</div>
-
-    </div>
-</div>
-<div class="art-slidenavigator art-slidenavigatoreb3151a12cdd4c029cb03823cb435590" data-left="1" data-top="1">
-<a href="#" class="art-slidenavigatoritem"></a><a href="#" class="art-slidenavigatoritem"></a>
-</div>
-
-
-
-    </div>
-<p>
+        <p><img style="float: left; margin-top: 7px; margin-right: 7px; margin-bottom: 7px; margin-left: 7px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(202, 199, 180); border-right-color: rgb(202, 199, 180); border-bottom-color: rgb(202, 199, 180); border-left-color: rgb(202, 199, 180); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;" width="400" height="236" alt="" class="art-lightbox" src="images/24a97328-77b2-47aa-8dc5-d552c528ea3d.png">
+        </p><p>
         </p><p>
         </p><p><span style="font-weight: bold;">Nam velit lectus, iaculis ac consequat eu, blandit id urna. Nullam interdum mollis mi, quis bibendum leo consectetur et. Etiam purus velit, feugiat vitae luctus convallis, luctus ac odio.</span></p>
         <p>&nbsp;Suspendisse eget urna sit amet purus pharetra pretium. Cras mattis quam eget odio placerat ac malesuada ipsum ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis augue eget elit porta elementum eget fringilla nunc. In eleifend cursus bibendum. Aenean sit amet varius eros. Integer semper, metus vel sagittis blandit, tellus massa fringilla risus, vel tincidunt dolor nibh vel est. Vestibulum facilisis est in diam ultricies luctus. Proin pharetra, nunc a aliquet lobortis, ipsum libero ultricies arcu, eu ornare sapien mi ut enim. Donec et dui eros. Quisque eget libero neque, id varius erat.<br></p>
@@ -382,7 +104,8 @@ height: 10px;
         <p><span style="font-weight: bold;">Open 7 days</span></p>
         <p><span style="font-weight: bold;">Monday to Friday</span> 7.30am to 10.00pm</p>
         <p><span style="font-weight: bold;">Saturday and Sunday</span> 8.30am to 10.00pm</p>
-        <p><img width="193" height="144" style="margin-top: 7px; margin-right: 7px; margin-bottom: 7px; margin-left: 7px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(202, 199, 180); border-right-color: rgb(202, 199, 180); border-bottom-color: rgb(202, 199, 180); border-left-color: rgb(202, 199, 180); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;" alt="" class="art-lightbox" src="images/dd2f62a1-763c-4af8-9106-3aa7bd202a57.png">
+        <p></p><img width="193" height="144" style="margin-top: 7px; margin-right: 7px; margin-bottom: 7px; margin-left: 7px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(202, 199, 180); border-right-color: rgb(202, 199, 180); border-bottom-color: rgb(202, 199, 180); border-left-color: rgb(202, 199, 180); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px;" alt="" class="art-lightbox" src="images/4d4b9c7a-5544-4168-b636-f26553d09e8b.png">
+        <p>
         </p><p>
         </p><p>
         </p><p><br></p>
