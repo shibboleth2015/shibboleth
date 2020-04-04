@@ -1,4 +1,4 @@
-/* Created by Artisteer v4.1.0.60046 */
+/* Created by Artisteer v4.3.0.60858 */
 
 #art-main
 {
@@ -41,13 +41,12 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
    -moz-background-origin: border !important;
    background-origin: border-box !important;
    background: #453931;
-   background: linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    background: -webkit-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    background: -moz-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    background: -o-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    background: -ms-linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
-   background: linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    -svg-background: linear-gradient(top, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(92, 76, 66, 0.8) 0, rgba(45, 37, 32, 0.8) 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
@@ -282,6 +281,18 @@ html, body
    height: 100%;
 }
 
+/**
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * https://github.com/necolas/normalize.css
+ */
+
+html {
+   -ms-text-size-adjust: 100%;
+   /* 2 */
+    -webkit-text-size-adjust: 100%;
+/* 2 */}
+
 body
 {
    padding: 0;
@@ -290,18 +301,20 @@ body
    color: #302E22;
 }
 
-.art-header:before, #art-header-bg:before, .art-layout-cell:before, .art-layout-wrapper:before, .art-footer:before, .art-nav:before, #art-hmenu-bg:before, .art-sheet:before
+.art-header:after, 
+#art-header-bg:after, 
+.art-layout-cell:after, 
+.art-layout-wrapper:after, 
+.art-footer:after, 
+.art-nav:after, 
+#art-hmenu-bg:after, 
+.art-sheet:after,
+.cleared, 
+.clearfix:after 
 {
-   width: 100%;
-   content: " ";
-   display: table;
-}
-.art-header:after, #art-header-bg:after, .art-layout-cell:after, .art-layout-wrapper:after, .art-footer:after, .art-nav:after, #art-hmenu-bg:after, .art-sheet:after,
-.cleared, .clearfix:after {
    clear: both;
-   font: 0/0 serif;
-   display: block;
-   content: " ";
+   display: table;
+   content: '';
 }
 
 form
@@ -383,8 +396,8 @@ li p, .art-postcontent li p, .art-blockcontent li p
   min-width: 50px;
   top: 4px;
   left: 83.9%;
-  line-height: 100%;
   margin-left: -254px !important;
+  line-height: 100%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -448,6 +461,7 @@ text-shadow: 0px 0px 12px rgb(255, 255, 255);
 
 
 
+
 .art-footer .layout-item-0 { padding: 15px; vertical-align: middle;  }
 .art-footer .layout-item-1 { vertical-align: middle;  }
 .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
@@ -456,17 +470,25 @@ text-shadow: 0px 0px 12px rgb(255, 255, 255);
 .art-header
 {
    margin:0 auto;
-   position:relative;
+   background-repeat: no-repeat;
    height: 500px;
+   position:relative;
    background-image: url('images/header.jpg');
    background-position: center top;
-   background-repeat: no-repeat;
 }
 
-.responsive .art-header 
+.custom-responsive .art-header
+{
+   background-image: url('images/header.jpg');
+   background-position: center top;
+}
+
+.default-responsive .art-header,
+.default-responsive #art-header-bg
 {
    background-image: url('images/header.jpg');
    background-position: center center;
+   background-size: cover;
 }
 
 .art-header-inner{
@@ -485,13 +507,12 @@ text-shadow: 0px 0px 12px rgb(255, 255, 255);
 .art-nav
 {
    background: #453931 url('images/nav.png') scroll;
-   background: linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -webkit-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -webkit-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -moz-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -moz-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -o-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -o-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -ms-linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), -ms-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
-   background: linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    -svg-background: linear-gradient(top, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(104, 86, 74, 0.15) 0, rgba(33, 27, 23, 0.09) 100%) no-repeat, url('images/nav.png'), linear-gradient(to bottom, #5C4C42 0, #2D2520 100%) no-repeat;
    border-bottom:2px solid #3B9CD8;
    padding:12px 6px 0;
    margin:0 auto;
@@ -598,11 +619,6 @@ ul.art-hmenu
    background-position: center;
 }
 
-.art-hmenu
-{
-   float: right;
-}
-
 .art-menuitemcontainer
 {
    margin:0 auto;
@@ -620,13 +636,12 @@ ul.art-hmenu>li:last-child, ul.art-hmenu>li.last-child {
 ul.art-hmenu>li>a
 {
    background: #746053 url('images/menuitem.png') scroll;
-   background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
    background: -webkit-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -webkit-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
    background: -moz-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -moz-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
    background: -o-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -o-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
    background: -ms-linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), -ms-linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
-   background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
    -svg-background: linear-gradient(top, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(top, #8C7463 0, #5F4F44 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(151, 125, 108, 0.11) 0, rgba(84, 70, 60, 0.06) 100%) no-repeat, url('images/menuitem.png'), linear-gradient(to bottom, #8C7463 0, #5F4F44 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -659,13 +674,12 @@ ul.art-hmenu>li>a
 ul.art-hmenu>li>a.active
 {
    background: #59ABDE url('images/menuactiveitem.png') scroll;
-   background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    background: -webkit-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -webkit-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    background: -moz-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -moz-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    background: -o-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -o-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    background: -ms-linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), -ms-linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
-   background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    -svg-background: linear-gradient(top, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(top, #7BBCE5 0, #3B9CD8 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(139, 196, 232, 0.12) 0, rgba(43, 148, 213, 0.05) 100%) no-repeat, url('images/menuactiveitem.png'), linear-gradient(to bottom, #7BBCE5 0, #3B9CD8 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -686,13 +700,12 @@ ul.art-hmenu>li:hover>a {
 ul.art-hmenu>li>a:hover, .desktop ul.art-hmenu>li:hover>a
 {
    background: #2A93D5 url('images/menuhovereditem.png') scroll;
-   background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    background: -webkit-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -webkit-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    background: -moz-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -moz-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    background: -o-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -o-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    background: -ms-linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), -ms-linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
-   background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    -svg-background: linear-gradient(top, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(top, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(87, 170, 222, 0.11) 0, transparent 50%, rgba(33, 116, 168, 0.05) 100%) no-repeat, url('images/menuhovereditem.png'), linear-gradient(to bottom, #48A2DB 0, #2A93D5 50%, #247FB7 100%) no-repeat;
    -webkit-border-radius:4px 4px 0 0;
    -moz-border-radius:4px 4px 0 0;
    border-radius:4px 4px 0 0;
@@ -950,6 +963,9 @@ ul.art-hmenu ul
 
 .art-layout-cell
 {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
    display: table-cell;
    vertical-align: top;
 }
@@ -1137,18 +1153,18 @@ input, select, textarea, a.art-search-button span
 input.art-button
 {
    float: none !important;
+   -webkit-appearance: none;
 }
 
 .art-button.active, .art-button.active:hover
 {
    background: #453931;
-   background: linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -webkit-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -moz-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -o-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    background: -ms-linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
-   background: linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
    -svg-background: linear-gradient(top, #5C4C42 0, #2D2520 100%) no-repeat;
+   background: linear-gradient(to bottom, #5C4C42 0, #2D2520 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
@@ -1163,13 +1179,12 @@ input.art-button
 .art-button.hover, .art-button:hover
 {
    background: #453931;
-   background: linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    background: -webkit-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    background: -moz-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    background: -o-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    background: -ms-linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
-   background: linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    -svg-background: linear-gradient(top, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
+   background: linear-gradient(to bottom, rgba(92, 76, 66, 0.92) 0, rgba(45, 37, 32, 0.92) 100%) no-repeat;
    -webkit-border-radius:4px;
    -moz-border-radius:4px;
    border-radius:4px;
@@ -1181,13 +1196,13 @@ input.art-button
    color: #FFFFFF !important;
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="range"], input[type="tel"], input[type="time"], input[type="week"], textarea
 {
    background: #F9FAFB;
    border:1px solid rgba(140, 116, 99, 0.2);
    margin:0 auto;
 }
-input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="number"], input[type="range"], input[type="tel"], input[type="time"], input[type="week"], textarea
 {
    width: auto;
    padding: 8px 0;
@@ -1243,6 +1258,7 @@ form.art-search
 
 form.art-search input, a.art-search-button
 {
+   -webkit-appearance: none;
    top:0;
    right:0;
 }
@@ -1256,9 +1272,7 @@ form.art-search>input, a.art-search-button{
 form.art-search input[type="submit"], input.art-search-button, a.art-search-button
 {
    background: #CAC7B4;
-   -webkit-border-radius:0 -1px -1px 0;
-   -moz-border-radius:0 -1px -1px 0;
-   border-radius:0 -1px -1px 0;
+   border-radius: 0;
    margin:0 auto;
 }
 form.art-search input[type="submit"], input.art-search-button, a.art-search-button {
@@ -1297,6 +1311,11 @@ a.art-search-button:hover, a.art-search-button.hover
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
+}
+
+a.art-search-button 
+{
+   line-height: 100% !important;
 }
 
 label.art-checkbox:before
@@ -1531,13 +1550,12 @@ label.art-radiobutton.hovered:before
 .art-pager
 {
    background: #EFF2F5;
-   background: linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
    background: -webkit-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
    background: -moz-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
    background: -o-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
    background: -ms-linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
-   background: linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
    -svg-background: linear-gradient(top, #FFFFFF 0, #93A8BE 100%) no-repeat;
+   background: linear-gradient(to bottom, #FFFFFF 0, #93A8BE 100%) no-repeat;
    -webkit-border-radius:2px;
    -moz-border-radius:2px;
    border-radius:2px;
@@ -1557,13 +1575,12 @@ label.art-radiobutton.hovered:before
 .art-pager>*
 {
    background: #BFDFF2;
-   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -webkit-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -moz-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -o-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -ms-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
-   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    -svg-background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: linear-gradient(to bottom, #FFFFFF 0, #72B8E3 100%) no-repeat;
    -webkit-border-radius:2px;
    -moz-border-radius:2px;
    border-radius:2px;
@@ -1590,13 +1607,12 @@ label.art-radiobutton.hovered:before
 .art-pager .active
 {
    background: #B6BFC9;
-   background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
    background: -webkit-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
    background: -moz-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
    background: -o-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
    background: -ms-linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
-   background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
    -svg-background: linear-gradient(top, #E5E8EB 0, #8796A6 100%) no-repeat;
+   background: linear-gradient(to bottom, #E5E8EB 0, #8796A6 100%) no-repeat;
    border:1px solid #BFDFF2;
    padding:7px;
    margin:0 4px 0 auto;
@@ -1607,13 +1623,12 @@ label.art-radiobutton.hovered:before
 .art-pager .more
 {
    background: #BFDFF2;
-   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -webkit-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -moz-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -o-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    background: -ms-linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
-   background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
    -svg-background: linear-gradient(top, #FFFFFF 0, #72B8E3 100%) no-repeat;
+   background: linear-gradient(to bottom, #FFFFFF 0, #72B8E3 100%) no-repeat;
    border:1px solid #BFDFF2;
    margin:0 4px 0 auto;
 }
@@ -1626,13 +1641,12 @@ label.art-radiobutton.hovered:before
 .art-pager a:hover
 {
    background: #84C1E7;
-   background: linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
    background: -webkit-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
    background: -moz-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
    background: -o-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
    background: -ms-linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
-   background: linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
    -svg-background: linear-gradient(top, #C8E3F4 0, #3F9ED9 100%) no-repeat;
+   background: linear-gradient(to bottom, #C8E3F4 0, #3F9ED9 100%) no-repeat;
    border:1px solid #BFDFF2;
    padding:7px;
    margin:0 4px 0 auto;
@@ -2219,6 +2233,7 @@ tr.Navigator td, td span.Navigator
    display: inline-block;
    text-indent: 32px;
    background-position: left center;
+   vertical-align: middle;
 }
 
 .art-rss-tag-icon:empty
@@ -2235,6 +2250,7 @@ tr.Navigator td, td span.Navigator
    display: inline-block;
    text-indent: 35px;
    background-position: left center;
+   vertical-align: middle;
 }
 
 .art-facebook-tag-icon:empty
@@ -2251,9 +2267,95 @@ tr.Navigator td, td span.Navigator
    display: inline-block;
    text-indent: 35px;
    background-position: left center;
+   vertical-align: middle;
 }
 
 .art-twitter-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.art-tumblr-tag-icon
+{
+   background:  url('images/tumblricon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+   vertical-align: middle;
+}
+
+.art-tumblr-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.art-pinterest-tag-icon
+{
+   background:  url('images/pinteresticon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+   vertical-align: middle;
+}
+
+.art-pinterest-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.art-vimeo-tag-icon
+{
+   background:  url('images/vimeoicon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:50px;
+   min-width:48px;
+   display: inline-block;
+   text-indent: 51px;
+   background-position: left center;
+   vertical-align: middle;
+}
+
+.art-vimeo-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.art-youtube-tag-icon
+{
+   background:  url('images/youtubeicon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+   vertical-align: middle;
+}
+
+.art-youtube-tag-icon:empty
+{
+   vertical-align: middle;
+}
+
+.art-linkedin-tag-icon
+{
+   background:  url('images/linkedinicon.png') no-repeat scroll;
+   margin:0 auto;
+   min-height:32px;
+   min-width:32px;
+   display: inline-block;
+   text-indent: 35px;
+   background-position: left center;
+   vertical-align: middle;
+}
+
+.art-linkedin-tag-icon:empty
 {
    vertical-align: middle;
 }

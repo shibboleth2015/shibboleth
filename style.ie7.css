@@ -1,4 +1,4 @@
-/* Created by Artisteer v4.1.0.60046 */
+/* Created by Artisteer v4.3.0.60858 */
 
 .art-header, #art-header-bg, .art-layout-cell, .art-layout-wrapper, .art-footer, .art-nav, #art-hmenu-bg, .art-sheet,
 .clearfix {
@@ -85,6 +85,10 @@ form.art-search div>input[type="text"]
    margin :0;
 }
 
+form.art-search
+{
+   zoom: 1;
+}
 .art-postheadericons span{
    zoom: 1;
 }
