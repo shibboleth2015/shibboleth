@@ -1,4 +1,4 @@
-/* Created by Artisteer v4.3.0.60745 */
+/* Created by Artisteer v4.3.0.60858 */
 
 #art-main
 {
@@ -300,22 +300,6 @@ body
    color: #302E22;
 }
 
-.art-header:before, 
-#art-header-bg:before, 
-.art-layout-cell:before, 
-.art-layout-wrapper:before, 
-.art-footer:before, 
-.art-nav:before, 
-#art-hmenu-bg:before, 
-.art-sheet:before 
-{
-   width: 100%;
-   content: " ";
-   display: table;
-   border-collapse: collapse;
-   border-spacing: 0;
-}
-
 .art-header:after, 
 #art-header-bg:after, 
 .art-layout-cell:after, 
@@ -324,12 +308,12 @@ body
 .art-nav:after, 
 #art-hmenu-bg:after, 
 .art-sheet:after,
-.cleared, .clearfix:after 
+.cleared, 
+.clearfix:after 
 {
    clear: both;
-   font: 0/0 serif;
-   display: block;
-   content: " ";
+   display: table;
+   content: '';
 }
 
 form
@@ -632,11 +616,6 @@ ul.art-hmenu
    width: auto;
    height: auto;
    background-position: center;
-}
-
-.art-hmenu
-{
-   float: right;
 }
 
 .art-menuitemcontainer
