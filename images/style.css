@@ -2,8 +2,7 @@
 
 #art-main
 {
-   background: #FFFFFF url('images/page.png') scroll;
-   background: url('images/pageglare.png') top center no-repeat, url('images/page.png'), #FFFFFF;
+   background: #F9FAFB url('images/pageglare.png') top center no-repeat scroll;
    margin:0 auto;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
