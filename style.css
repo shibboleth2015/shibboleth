@@ -2,13 +2,13 @@
 
 #art-main
 {
-   background: #FFFFFF url('images/pageglare.png') no-repeat scroll;
-   background: url('images/pageglare.png') no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, -o-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, -ms-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
-   -svg-background: url('images/pageglare.png') no-repeat, linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, linear-gradient(to bottom, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
+   background: #FFFFFF url('images/page.png') scroll;
+   background: url('images/pageglare.png') no-repeat, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0, rgba(179, 179, 179, 0.11) 1050px) no-repeat, url('images/page.png'), -webkit-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, -moz-linear-gradient(top, rgba(255, 255, 255, 0.3) 0, rgba(179, 179, 179, 0.11) 1050px) no-repeat, url('images/page.png'), -moz-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, -o-linear-gradient(top, rgba(255, 255, 255, 0.3) 0, rgba(179, 179, 179, 0.11) 1050px) no-repeat, url('images/page.png'), -o-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, -ms-linear-gradient(top, rgba(255, 255, 255, 0.3) 0, rgba(179, 179, 179, 0.11) 1050px) no-repeat, url('images/page.png'), -ms-linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
+   -svg-background: url('images/pageglare.png') no-repeat, linear-gradient(top, rgba(255, 255, 255, 0.3) 0, rgba(179, 179, 179, 0.11) 1050px) no-repeat, url('images/page.png'), linear-gradient(top, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0, rgba(179, 179, 179, 0.11) 1050px) no-repeat, url('images/page.png'), linear-gradient(to bottom, #FFFFFF 0, #CCCCCC 1050px) no-repeat;
    margin:0 auto;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
