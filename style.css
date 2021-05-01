@@ -2,7 +2,7 @@
 
 #art-main
 {
-   background: #F5F7F9 url('images/pageglare.png') top center no-repeat scroll;
+   background: #F9FAFB url('images/pageglare.png') top center no-repeat scroll;
    background: url('images/pageglare.png') top center no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
    background: url('images/pageglare.png') top center no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
    background: url('images/pageglare.png') top center no-repeat, -o-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
