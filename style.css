@@ -2,13 +2,13 @@
 
 #art-main
 {
-   background: #EFF2F5 url('images/pageglare.png') top center no-repeat scroll;
-   background: url('images/pageglare.png') top center no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
-   background: url('images/pageglare.png') top center no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
-   background: url('images/pageglare.png') top center no-repeat, -o-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
-   background: url('images/pageglare.png') top center no-repeat, -ms-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
-   -svg-background: url('images/pageglare.png') top center no-repeat, linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
-   background: url('images/pageglare.png') top center no-repeat, linear-gradient(to bottom, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
+   background: #F5F7F9 url('images/pageglare.png') top center no-repeat scroll;
+   background: url('images/pageglare.png') top center no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, -o-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, -ms-linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
+   -svg-background: url('images/pageglare.png') top center no-repeat, linear-gradient(top, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, linear-gradient(to bottom, #FFFFFF 0, #BCC9D7 1050px) no-repeat;
    margin:0 auto;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
