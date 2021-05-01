@@ -2,13 +2,13 @@
 
 #art-main
 {
-   background: #E2E8EE url('images/pageglare.png') no-repeat scroll;
-   background: url('images/pageglare.png') no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #AFBFCF 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #AFBFCF 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, -o-linear-gradient(top, #FFFFFF 0, #AFBFCF 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, -ms-linear-gradient(top, #FFFFFF 0, #AFBFCF 1050px) no-repeat;
-   -svg-background: url('images/pageglare.png') no-repeat, linear-gradient(top, #FFFFFF 0, #AFBFCF 1050px) no-repeat;
-   background: url('images/pageglare.png') no-repeat, linear-gradient(to bottom, #FFFFFF 0, #AFBFCF 1050px) no-repeat;
+   background: #EFF2F5 url('images/pageglare.png') no-repeat scroll;
+   background: url('images/pageglare.png') no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, -o-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, -ms-linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
+   -svg-background: url('images/pageglare.png') no-repeat, linear-gradient(top, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
+   background: url('images/pageglare.png') no-repeat, linear-gradient(to bottom, #FFFFFF 0, #B6C4D3 1050px) no-repeat;
    margin:0 auto;
    font-size: 13px;
    font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
