@@ -5,7 +5,7 @@
    background: #FFFFFF url('images/pageglare.png') top center no-repeat scroll;
    margin:0 auto;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    position: relative;
@@ -19,7 +19,7 @@
 table, ul.art-hmenu
 {
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
 }
@@ -74,7 +74,7 @@ ul.art-vmenu a
 .art-postcontent a:hover,
 .art-postcontent a.hovered
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent p
@@ -95,7 +95,7 @@ ul.art-vmenu a
 .art-postheader, .art-postheader a, .art-postheader a:link, .art-postheader a:visited, .art-postheader a:hover
 {
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: bold;
    font-style: normal;
    text-decoration: none;
@@ -103,7 +103,7 @@ ul.art-vmenu a
 
 .art-postcontent a, .art-postcontent a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: bold;
    font-style: normal;
    text-decoration: none;
@@ -112,14 +112,14 @@ ul.art-vmenu a
 
 .art-postcontent a:visited, .art-postcontent a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    color: #958F6A;
 }
 
 .art-postcontent  a:hover, .art-postcontent a.hover
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
    color: #59ABDE;
 }
@@ -129,20 +129,20 @@ ul.art-vmenu a
    color: #2A93D5;
    margin: 10px 0 0;
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent h1
 {
    margin: 10px 0 0;
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h1 a, .art-postcontent h1 a:link, .art-postcontent h1 a:hover, .art-postcontent h1 a:visited, .art-blockcontent h1 a, .art-blockcontent h1 a:link, .art-blockcontent h1 a:hover, .art-blockcontent h1 a:visited 
 {
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h2
@@ -150,20 +150,20 @@ ul.art-vmenu a
    color: #957B6A;
    margin: 10px 0 0;
    font-size: 36px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent h2
 {
    margin: 10px 0 0;
    font-size: 36px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h2 a, .art-postcontent h2 a:link, .art-postcontent h2 a:hover, .art-postcontent h2 a:visited, .art-blockcontent h2 a, .art-blockcontent h2 a:link, .art-blockcontent h2 a:hover, .art-blockcontent h2 a:visited 
 {
    font-size: 36px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h3
@@ -171,20 +171,20 @@ ul.art-vmenu a
    color: #957B6A;
    margin: 10px 0 0;
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent h3
 {
    margin: 10px 0 0;
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h3 a, .art-postcontent h3 a:link, .art-postcontent h3 a:hover, .art-postcontent h3 a:visited, .art-blockcontent h3 a, .art-blockcontent h3 a:link, .art-blockcontent h3 a:hover, .art-blockcontent h3 a:visited 
 {
    font-size: 26px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h4
@@ -192,20 +192,20 @@ ul.art-vmenu a
    color: #302E22;
    margin: 10px 0 0;
    font-size: 16px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent h4
 {
    margin: 10px 0 0;
    font-size: 16px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h4 a, .art-postcontent h4 a:link, .art-postcontent h4 a:hover, .art-postcontent h4 a:visited, .art-blockcontent h4 a, .art-blockcontent h4 a:link, .art-blockcontent h4 a:hover, .art-blockcontent h4 a:visited 
 {
    font-size: 16px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h5
@@ -213,20 +213,20 @@ ul.art-vmenu a
    color: #302E22;
    margin: 10px 0 0;
    font-size: 14px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent h5
 {
    margin: 10px 0 0;
    font-size: 14px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h5 a, .art-postcontent h5 a:link, .art-postcontent h5 a:hover, .art-postcontent h5 a:visited, .art-blockcontent h5 a, .art-blockcontent h5 a:link, .art-blockcontent h5 a:hover, .art-blockcontent h5 a:visited 
 {
    font-size: 14px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h6
@@ -234,20 +234,20 @@ ul.art-vmenu a
    color: #716D50;
    margin: 10px 0 0;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent h6
 {
    margin: 10px 0 0;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postcontent h6 a, .art-postcontent h6 a:link, .art-postcontent h6 a:hover, .art-postcontent h6 a:visited, .art-blockcontent h6 a, .art-blockcontent h6 a:link, .art-blockcontent h6 a:hover, .art-blockcontent h6 a:visited 
 {
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 header, footer, article, nav, #art-hmenu-bg, .art-sheet, .art-hmenu a, .art-vmenu a, .art-slidenavigator > a, .art-checkbox:before, .art-radiobutton:before
@@ -412,7 +412,7 @@ li p, .art-postcontent li p, .art-blockcontent li p
 .art-headline a:hover
 {
 font-size: 47px;
-font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 font-weight: bold;
 font-style: normal;
 text-decoration: none;
@@ -447,7 +447,7 @@ text-shadow: 0px 0px 6px rgba(23, 23, 23, 0.98);
 .art-slogan a:hover
 {
 font-size: 24px;
-font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 font-weight: bold;
 font-style: normal;
 text-decoration: none;
@@ -663,7 +663,7 @@ ul.art-hmenu>li>a
 .art-hmenu>li>a:hover
 {
    font-size: 18px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    text-decoration: none;
@@ -757,7 +757,7 @@ ul.art-hmenu li li ul>li:last-child
    line-height: 24px;
    color: #081D2B;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    margin:0;
 }
@@ -784,7 +784,7 @@ ul.art-hmenu li li ul>li:last-child
    line-height: 24px;
    color: #081D2B;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    margin:0;
 }
@@ -998,7 +998,7 @@ div.art-block img
 {
    color: #625146;
    font-size: 22px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    margin: 0 10px;
 }
 
@@ -1008,7 +1008,7 @@ div.art-block img
    margin:0 auto;
    color: #302E22;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 .art-blockcontent table,
 .art-blockcontent li, 
@@ -1019,7 +1019,7 @@ div.art-block img
 {
    color: #302E22;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-blockcontent p
@@ -1030,7 +1030,7 @@ div.art-block img
 .art-blockcontent a, .art-blockcontent a:link
 {
    color: #2A93D5;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: bold;
    font-style: normal;
    text-decoration: underline;
@@ -1041,14 +1041,14 @@ div.art-block img
    color: #C4C1AB;
    font-weight: bold;
    font-style: normal;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
 
 .art-blockcontent a:hover, .art-blockcontent a.hover
 {
    color: #59ABDE;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
 .art-block ul>li:before
@@ -1072,7 +1072,7 @@ div.art-block img
 .art-block li
 {
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 125%;
    color: #4B4835;
    margin: 5px 0 0 10px;
@@ -1104,7 +1104,7 @@ button.art-button
 {
    text-decoration: none;
    font-size: 14px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    position:relative;
@@ -1139,7 +1139,7 @@ input, select, textarea, a.art-search-button span
 {
    vertical-align: middle;
    font-size: 14px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
 }
@@ -1207,7 +1207,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
    padding: 8px 0;
    color: #483B33 !important;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    text-shadow: none;
@@ -1221,7 +1221,7 @@ input.art-error, textarea.art-error
 input.art-error, textarea.art-error {
    color: #483B33 !important;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
 }
@@ -1238,7 +1238,7 @@ form.art-search input[type="text"]
    box-sizing: border-box;
    color: #483B33 !important;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
 }
@@ -1285,7 +1285,7 @@ form.art-search input[type="submit"], input.art-search-button, a.art-search-butt
    padding:0 6px;
    color: #625F46 !important;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    cursor: pointer;
@@ -1307,7 +1307,7 @@ a.art-search-button:hover, a.art-search-button.hover
 {
    text-decoration: none;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
 }
@@ -1332,7 +1332,7 @@ label.art-checkbox
 {
    cursor: pointer;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    line-height: 16px;
@@ -1386,7 +1386,7 @@ label.art-radiobutton
 {
    cursor: pointer;
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: normal;
    line-height: 12px;
@@ -1469,7 +1469,7 @@ label.art-radiobutton.hovered:before
 {
    padding:10px 0;
    color: #4B4835;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-comment
@@ -1485,7 +1485,7 @@ label.art-radiobutton.hovered:before
 .art-comment-header
 {
    color: #0D2F44;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 100%;
 }
 
@@ -1496,25 +1496,25 @@ label.art-radiobutton.hovered:before
 .art-comment-header a:hover,
 .art-comment-header a.hovered
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 100%;
 }
 
 .art-comment-header a, .art-comment-header a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #379AD7;
 }
 
 .art-comment-header a:visited, .art-comment-header a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #379AD7;
 }
 
 .art-comment-header a:hover,  .art-comment-header a.hovered
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #379AD7;
 }
 
@@ -1525,24 +1525,24 @@ label.art-radiobutton.hovered:before
 .art-comment-content a:hover,
 .art-comment-content a.hovered
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-comment-content a, .art-comment-content a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #7A6557;
 }
 
 .art-comment-content a:visited, .art-comment-content a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #625F46;
 }
 
 .art-comment-content a:hover,  .art-comment-content a.hovered
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #7A6557;
 }
 
@@ -1597,7 +1597,7 @@ label.art-radiobutton.hovered:before
 .art-pager .active
 {
    line-height: normal;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    color: #0A2333
 ;
@@ -1802,7 +1802,7 @@ pre
    color: #625146;
    margin: 5px 0;
    font-size: 24px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postheader a, 
@@ -1813,12 +1813,12 @@ pre
 .art-postheader a.hovered
 {
    font-size: 24px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-postheader a, .art-postheader a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
    color: #2685C0;
@@ -1826,7 +1826,7 @@ pre
 
 .art-postheader a:visited, .art-postheader a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
    color: #86815F;
@@ -1834,7 +1834,7 @@ pre
 
 .art-postheader a:hover,  .art-postheader a.hovered
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    text-align: left;
    color: #59ABDE;
@@ -1846,7 +1846,7 @@ pre
 .art-postheadericons a:visited,
 .art-postheadericons a:hover
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #625F46;
 }
 
@@ -1857,14 +1857,14 @@ pre
 
 .art-postheadericons a, .art-postheadericons a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
    color: #1D6795;
 }
 
 .art-postheadericons a:visited, .art-postheadericons a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: italic;
    text-decoration: underline;
@@ -1873,7 +1873,7 @@ pre
 
 .art-postheadericons a:hover, .art-postheadericons a.hover
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    font-weight: normal;
    font-style: italic;
    text-decoration: none;
@@ -1951,7 +1951,7 @@ pre
 .art-postcontent li, .art-post li, .art-textblock li
 {
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #4B4835;
    margin: 5px 0 5px 11px;
 }
@@ -2005,7 +2005,7 @@ blockquote
    padding:10px 10px 10px 38px;
    margin:10px 10px 10px 50px;
    color: #12110D;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    /* makes block not to align behind the image if they are in the same line */
   overflow: auto;
    clear:both;
@@ -2016,7 +2016,7 @@ blockquote a:visited, .art-postcontent blockquote a:visited, .art-blockcontent b
 blockquote a:hover, .art-postcontent blockquote a:hover, .art-blockcontent blockquote a:hover, .art-footer blockquote a:hover
 {
    color: #12110D;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 /* Override native 'p' margins*/
@@ -2035,7 +2035,7 @@ blockquote p,
 .art-postfootericons a:visited,
 .art-postfootericons a:hover
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #7A7657;
 }
 
@@ -2046,21 +2046,21 @@ blockquote p,
 
 .art-postfootericons a, .art-postfootericons a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
    color: #1D6795;
 }
 
 .art-postfootericons a:visited, .art-postfootericons a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
    color: #1D6795;
 }
 
 .art-postfootericons a:hover, .art-postfootericons a.hover
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
    color: #2788C4;
 }
@@ -2092,31 +2092,31 @@ tr.Navigator td, td span.Navigator
 .Sorter a
 {
    position:relative;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #2788C4;
 }
 
 .Sorter a:link
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #2788C4;
 }
 
 .Sorter a:visited, .Sorter a.visited
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #2788C4;
 }
 
 .Sorter a:hover, .Sorter a.hover
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color: #1D6795;
 }
 
 .Sorter
 {
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    color:#154A6A;
 }
 
@@ -2132,7 +2132,7 @@ tr.Navigator td, td span.Navigator
    margin:0 auto;
    position: relative;
    color: #FFFFFF;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-align: left;
    padding: 0;
 }
@@ -2146,7 +2146,7 @@ tr.Navigator td, td span.Navigator
 .art-footer caption
 {
    color: #FFFFFF;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer p 
@@ -2160,58 +2160,58 @@ tr.Navigator td, td span.Navigator
 .art-footer a:link
 {
    color: #927968;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
 
 .art-footer a:visited
 {
    color: #A8A385;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: underline;
 }
 
 .art-footer a:hover
 {
    color: #2990D1;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    text-decoration: none;
 }
 
 .art-footer h1
 {
    color: #2A93D5;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h2
 {
    color: #59ABDE;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h3
 {
    color: #8C7463;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h4
 {
    color: #CAC7B4;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h5
 {
    color: #CAC7B4;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer h6
 {
    color: #CAC7B4;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
 }
 
 .art-footer img
@@ -2386,7 +2386,7 @@ tr.Navigator td, td span.Navigator
 .art-footer li
 {
    font-size: 13px;
-   font-family: 'Century Gothic', Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
    line-height: 125%;
    color: #DBD9CC;
 }
