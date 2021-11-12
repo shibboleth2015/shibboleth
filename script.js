@@ -514,23 +514,6 @@ jQuery(function ($) {
 
 jQuery(function ($) {
     'use strict';
-    $(window).bind('resize', function () {
-        var bh = $('body').height();
-        var mh = 0;
-        var c = $('div.art-content');
-        c.removeAttr('style');
-
-        $('#art-main').children().each(function() {
-            if ($(this).css('position') !== 'absolute') {
-                mh += $(this).outerHeight(true);
-            }
-        });
-        
-        if (mh < bh) {
-            var r = bh - mh;
-            c.css('height', (c.parent().outerHeight(true) + r) + 'px');
-        }
-    });
 
     if (browser.ie && browser.version < 8) {
         $(window).bind('resize', function() {
@@ -1182,7 +1165,7 @@ jQuery(function () {
 
 
 if (typeof window.resizeData === 'undefined') window.resizeData = {};
-window.resizeData.headerPageWidth = true;
+window.resizeData.headerPageWidth = false;
 if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiveData = [false, true, true, true, true, ];
 
 resizeData['headline'] = {
@@ -1463,7 +1446,7 @@ jQuery(function ($) {
         return;
     processElementMultiplyBg(".art-header", {
         "bgimage": "url('images/header.jpg')",
-        "bgposition": "center top",
+        "bgposition": "0 0",
         "images": "",
         "positions": ""
     });
