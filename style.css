@@ -2,7 +2,13 @@
 
 #art-main
 {
-   background: #E3E2D8 url('images/pageglare.png') top center no-repeat scroll;
+   background: #D9DEE3 url('images/pageglare.png') top center no-repeat scroll;
+   background: url('images/pageglare.png') top center no-repeat, -webkit-linear-gradient(top, #FFFFFF 0, #B0BAC4 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, -moz-linear-gradient(top, #FFFFFF 0, #B0BAC4 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, -o-linear-gradient(top, #FFFFFF 0, #B0BAC4 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, -ms-linear-gradient(top, #FFFFFF 0, #B0BAC4 1050px) no-repeat;
+   -svg-background: url('images/pageglare.png') top center no-repeat, linear-gradient(top, #FFFFFF 0, #B0BAC4 1050px) no-repeat;
+   background: url('images/pageglare.png') top center no-repeat, linear-gradient(to bottom, #FFFFFF 0, #B0BAC4 1050px) no-repeat;
    margin:0 auto;
    font-size: 14px;
    font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
