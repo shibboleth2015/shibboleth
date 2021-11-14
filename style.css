@@ -578,8 +578,8 @@ ul.art-hmenu
 {
    display: inline-block;
    vertical-align: bottom;
-   padding-left: 16px;
-   padding-right: 16px;
+   padding-left: 6px;
+   padding-right: 6px;
 }
 
 .art-nav-inner:before 
@@ -594,8 +594,8 @@ ul.art-hmenu
 
 .desktop  .art-nav-inner{
    width: 1000px;
-   padding-left: 16px;
-   padding-right: 16px;
+   padding-left: 6px;
+   padding-right: 6px;
 }
 
 .desktop .art-nav
@@ -939,7 +939,12 @@ ul.art-hmenu ul
 .art-sheet
 {
    background: #FFFFFF;
-   padding:10px;
+   -webkit-box-shadow:0 0 3px 2px rgba(0, 0, 0, 0.15);
+   -moz-box-shadow:0 0 3px 2px rgba(0, 0, 0, 0.15);
+   box-shadow:0 0 3px 2px rgba(0, 0, 0, 0.15);
+   border:1px solid #B9B59D;
+   border-top:none;
+   border-bottom:none;
    margin:0 auto;
    position:relative;
    cursor:auto;
@@ -983,7 +988,7 @@ ul.art-hmenu ul
 
 .art-block
 {
-   margin:10px;
+   margin:7px;
 }
 div.art-block img
 {
@@ -2231,8 +2236,8 @@ tr.Navigator td, td span.Navigator
    margin: 0 auto;
    width:1000px;
    padding:40px;
-   padding-right: 50px;
-   padding-left: 50px;
+   padding-right: 40px;
+   padding-left: 40px;
 }
 
 .art-rss-tag-icon
