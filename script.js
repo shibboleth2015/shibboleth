@@ -1187,11 +1187,11 @@ if (typeof window.defaultResponsiveData === 'undefined') window.defaultResponsiv
 
 resizeData['headline'] = {
    responsive: [
-                  { left: 0.84, top: 0.11, visible: true }, 
-                  { left: 0.84, top: 0.11, visible: true }, 
-                  { left: 0.84, top: 0.11, visible: true }, 
-                  { left: 0.84, top: 0.11, visible: true }, 
-                  { left: 0.84, top: 0.11, visible: true }, 
+                  { left: 0.88, top: 0.15, visible: true }, 
+                  { left: 0.88, top: 0.15, visible: true }, 
+                  { left: 0.88, top: 0.15, visible: true }, 
+                  { left: 0.88, top: 0.15, visible: true }, 
+                  { left: 0.88, top: 0.15, visible: true }, 
                ],
    area: {
        x: 0,
