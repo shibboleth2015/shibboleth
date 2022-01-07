@@ -60,7 +60,7 @@ img {
 }
 /*-- //Reset Code --*/
 body{
-	background:url('https://shibboleth.eu.org/404/images/16.jpg') no-repeat 0px 0px;
+	background:url('../images/16.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:699px;
 }
