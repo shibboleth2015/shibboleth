@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Ararat</name>
+	<gx:CascadingStyle kml:id="__managed_style_02FD7E726220EF392375">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_1299007FB120EF392374">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/rpc/cc/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_09850EC16920EF392374">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_1299007FB120EF392374</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_02FD7E726220EF392375</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0D5A7D922320EE1654FB">
+		<name>Ark</name>
+		<LookAt>
+			<longitude>44.2371632558237</longitude>
+			<latitude>39.72672695837044</latitude>
+			<altitude>3328.798133326328</altitude>
+			<heading>104.1514579872243</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>657.1207280628734</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_09850EC16920EF392374</styleUrl>
+		<Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						44.23713212379812,39.72841614686881,3349.825542211446 44.23679261317624,39.72760501724549,3335.459688610945 44.23635963280461,39.72687223385147,3321.272892104284 44.23618120280865,39.72583138034487,3305.654122960811 44.2366940290249,39.72576292755277,3311.687668316059 44.23727488009551,39.7268612688205,3331.570037638186 44.23751850473299,39.72850858480381,3353.112532322512 44.23713212379812,39.72841614686881,3349.825542211446 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+	<Placemark id="042FFB367320EE4E207E">
+		<name>This is the Ark of Noah</name>
+		<LookAt>
+			<longitude>44.24511758561479</longitude>
+			<latitude>39.72695751215388</latitude>
+			<altitude>3377.575962911942</altitude>
+			<heading>34.60269321374567</heading>
+			<tilt>72.63489022545676</tilt>
+			<gx:fovy>30</gx:fovy>
+			<range>6955.346137268934</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_09850EC16920EF392374</styleUrl>
+		<Point>
+			<coordinates>44.23703980750965,39.72737493340607,0</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0DADA5CD6220EE4BC1EE">
+		<name>Mount Ararat - Represented by the Tabernacle</name>
+		<LookAt>
+			<longitude>44.30541284415556</longitude>
+			<latitude>39.6938978010506</latitude>
+			<altitude>4529.605762962467</altitude>
+			<heading>-31.66347146797005</heading>
+			<tilt>84.24885785031408</tilt>
+			<gx:fovy>30</gx:fovy>
+			<range>3992.055570854573</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_09850EC16920EF392374</styleUrl>
+		<Point>
+			<coordinates>44.30311397144227,39.70135264340227,5071.83609975637</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0EB452240D20EE952EB0">
+		<name>Little Ararat, represented by the Burnt offering altar</name>
+		<LookAt>
+			<longitude>44.3495191326949</longitude>
+			<latitude>39.72186846167549</latitude>
+			<altitude>3000.053174787655</altitude>
+			<heading>-31.76378367073493</heading>
+			<tilt>84.34018874319713</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>15067.30714209611</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_09850EC16920EF392374</styleUrl>
+		<Point>
+			<coordinates>44.41393258276039,39.64745159176718,3857.916832509565</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
